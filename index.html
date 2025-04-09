@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thinkies - Patterns for Creative Thinking</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --background-color: #f9f9f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 2rem 0;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+        }
+        
+        section {
+            padding: 3rem 1rem;
+        }
+        
+        section.alt {
+            background-color: white;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--dark-color);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .example {
+            background-color: var(--light-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        
+        .example h3 {
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .example p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .example .transform {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .category {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial .author {
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .newsletter {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .newsletter input {
+            padding: 0.8rem;
+            width: 70%;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+        
+        .newsletter button {
+            padding: 0.8rem;
+            width: 30%;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .features, .examples, .testimonials {
+                grid-template-columns: 1fr;
+            }
+            
+            .newsletter input, .newsletter button {
+                width: 100%;
+                border-radius: 4px;
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container hero">
+            <h1>Thinkies</h1>
+            <p>Powerful pattern-based tools for creative problem solving</p>
+            <a href="#learn-more" class="cta-button">Learn More</a>
+        </div>
+    </header>
+    
+    <section id="learn-more">
+        <div class="container">
+            <h2>What Are Thinkies?</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem auto;">
+                Thinkies are pattern-matching tools that help you generate creative ideas. 
+                Each Thinkie contains a pattern (something you recognize) and a transformation (something you do with that pattern).
+                They're not about producing good ideas directly—they're about producing <em>lots</em> of ideas, some of which might be brilliant.
+            </p>
+            
+            <div class="features">
+                <div class="feature">
+                    <h3>Pattern Recognition</h3>
+                    <p>Thinkies teach you to spot common situations where creative thinking can break through barriers.</p>
+                </div>
+                <div class="feature">
+                    <h3>Simple Transformations</h3>
+                    <p>Each Thinkie provides a specific transformation to apply when you recognize the pattern.</p>
+                </div>
+                <div class="feature">
+                    <h3>Deferred Judgment</h3>
+                    <p>Thinkies separate idea generation from evaluation, a key principle of creative thinking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="alt">
+        <div class="container">
+            <h2>How Thinkies Work</h2>
+            <ol style="max-width: 600px; margin: 0 auto 2rem auto;">
+                <li><strong>Match</strong> the pattern in a situation</li>
+                <li><strong>Apply</strong> the transformation</li>
+                <li><strong>Evaluate</strong> the result afterward</li>
+            </ol>
+            
+            <div class="examples">
+                <div class="example">
+                    <h3>Can't/Because</h3>
+                    <p><strong>Pattern:</strong> "We can't X because Y."</p>
+                    <p class="transform"><strong>Transform:</strong> "When (not Y), then we can X."</p>
+                    <p><em>Example:</em> "We can't deploy daily because there are too many bugs" → "When we have fewer bugs, we can deploy daily."</p>
+                </div>
+                <div class="example">
+                    <h3>Easy Bit</h3>
+                    <p><strong>Pattern:</strong> You're paralyzed by the magnitude of a problem.</p>
+                    <p class="transform"><strong>Transform:</strong> Pick the absolutely easiest helpful thing to do and do it.</p>
+                    <p><em>Example:</em> Facing a complex project, start by setting up the simplest component.</p>
+                </div>
+                <div class="example">
+                    <h3>Half in Half</h3>
+                    <p><strong>Pattern:</strong> Someone gives you a date for a scope of work.</p>
+                    <p class="transform"><strong>Transform:</strong> Ask which half they can see in half the time.</p>
+                    <p><em>Example:</em> "We'll deliver in 6 months" → "Which half can I see in 3 months?"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+            <h2>Thinkie Categories</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem auto;">
+                There are over 50 Thinkies organized into useful categories for different situations:
+            </p>
+            
+            <div class="categories">
+                <div class="category">Getting Unstuck</div>
+                <div class="category">Decision Making</div>
+                <div class="category">Problem Reframing</div>
+                <div class="category">System Design</div>
+                <div class="category">Collaboration</div>
+                <div class="category">Process Optimization</div>
+                <div class="category">Quick Analysis</div>
+            </div>
+            
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>"Half in Half is my all-time favorite Thinkie. I've made more money consulting with this than any other single technique."</p>
+                    <div class="author">— Kent Beck</div>
+                </div>
+                <div class="testimonial">
+                    <p>"Thinkies have completely changed how I approach difficult problems. The Easy Bit Thinkie alone has helped me break through paralysis countless times."</p>
+                    <div class="author">— Software Engineer</div>
+                </div>
+                <div class="testimonial">
+                    <p>"The beauty of Thinkies is that they give you a structured way to generate unstructured thinking. They're patterns that help you break patterns."</p>
+                    <div class="author">— Product Manager</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="alt">
+        <div class="container">
+            <h2>Start Using Thinkies Today</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem auto;">
+                Begin with one Thinkie. Practice it until it becomes automatic. Then add another.
+            </p>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#" class="cta-button">Get the Full Thinkie Collection</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>Stay updated with new Thinkies and creative thinking tools</p>
+            <div class="newsletter">
+                <input type="email" placeholder="Your email address">
+                <button>Subscribe</button>
+            </div>
+            <p style="margin-top: 2rem;">&copy; 2025 Thinkies. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
