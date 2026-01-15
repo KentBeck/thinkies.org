@@ -82,11 +82,20 @@
       }
 
       const data = await response.json();
-      thinkies = data.thinkies;
+
+      if (!data || !Array.isArray(data.thinkies)) {
+        console.error('Invalid data format: thinkies array not found or malformed');
+        thinkies = [];
+        error = 'Invalid data format received';
+      } else {
+        thinkies = data.thinkies;
+      }
+
       loading = false;
     } catch (e) {
       console.error('Error loading data:', e);
       error = e.message;
+      thinkies = [];
       loading = false;
     }
   });

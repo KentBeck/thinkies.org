@@ -7,11 +7,21 @@
     return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 
+  function escapeHtml(text) {
+    return text
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
   function highlightText(text, query) {
-    if (!query) return text;
+    if (!query) return escapeHtml(text);
+    const escapedText = escapeHtml(text);
     const escapedQuery = escapeRegex(query);
-    const regex = new RegExp(`(${escapedQuery})`, 'gi');
-    return text.replace(regex, '<mark>$1</mark>');
+    const regex = new RegExp(`(${escapeHtml(escapedQuery)})`, 'gi');
+    return escapedText.replace(regex, '<mark>$1</mark>');
   }
 
   function truncateText(text, maxLength = 150) {
