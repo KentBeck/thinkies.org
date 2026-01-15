@@ -3,9 +3,14 @@
   export let query = '';
   export let onSelectThinkie;
 
+  function escapeRegex(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
   function highlightText(text, query) {
     if (!query) return text;
-    const regex = new RegExp(`(${query})`, 'gi');
+    const escapedQuery = escapeRegex(query);
+    const regex = new RegExp(`(${escapedQuery})`, 'gi');
     return text.replace(regex, '<mark>$1</mark>');
   }
 

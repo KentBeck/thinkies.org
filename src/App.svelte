@@ -74,19 +74,15 @@
 
   onMount(async () => {
     try {
-      console.log('Fetching data...');
       const dataUrl = `${import.meta.env.BASE_URL}data/twc1_data.json`;
       const response = await fetch(dataUrl);
-      console.log('Response status:', response.status);
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
       const data = await response.json();
-      console.log('Data loaded:', data);
       thinkies = data.thinkies;
-      console.log('Thinkies:', thinkies);
       loading = false;
     } catch (e) {
       console.error('Error loading data:', e);

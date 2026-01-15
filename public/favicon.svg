@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Brain/thought bubble icon -->
+  <circle cx="50" cy="50" r="45" fill="url(#grad)"/>
+  <path d="M 30 45 Q 30 30 45 30 Q 50 25 55 30 Q 70 30 70 45 Q 75 50 70 55 Q 70 70 55 70 Q 50 75 45 70 Q 30 70 30 55 Q 25 50 30 45" fill="white" opacity="0.9"/>
+  <circle cx="42" cy="45" r="3" fill="#667eea"/>
+  <circle cx="50" cy="45" r="3" fill="#667eea"/>
+  <circle cx="58" cy="45" r="3" fill="#667eea"/>
+</svg>
