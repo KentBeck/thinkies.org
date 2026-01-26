@@ -74,8 +74,8 @@
 
   .search-input:focus {
     outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    border-color: #1877F2;
+    box-shadow: 0 0 0 3px rgba(253, 83, 83, 0.1);
   }
 
   .clear-button {

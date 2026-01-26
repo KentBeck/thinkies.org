@@ -1,3 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply text-base-content leading-relaxed;
+  }
+}
+
+@layer components {
+  /* Accent color (blue) for text/borders - legible on white */
+  .text-accent-blue {
+    color: #1877F2;
+  }
+
+  .border-accent-blue {
+    border-color: #1877F2;
+  }
+
+  .badge-accent-blue {
+    background-color: #1877F2;
+    color: white;
+    border-color: #1877F2;
+  }
+
+  /* Coral only for buttons */
+  .btn-coral {
+    display: inline-block;
+    background-color: #FD5353;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+  }
+
+  .btn-coral:hover {
+    background-color: #e64545;
+  }
+
+  .btn-coral-lg {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
+
+  .input-email {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem 0 0 0.5rem;
+    width: 16rem;
+    background-color: white;
+    color: #333;
+  }
+
+  .input-email::placeholder {
+    color: #999;
+  }
+
+  .join .btn-coral {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+}
