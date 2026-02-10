@@ -1,18 +1,17 @@
 <script>
-  import { onMount } from 'svelte';
-  import InsightsList from './InsightsList.svelte';
-  import SearchBar from './SearchBar.svelte';
-  import SearchResults from './SearchResults.svelte';
+  import { goto } from '$app/navigation';
+  import InsightsList from '$lib/components/InsightsList.svelte';
+  import SearchBar from '$lib/components/SearchBar.svelte';
+  import SearchResults from '$lib/components/SearchResults.svelte';
 
-  export let onNavigate;
+  export let data;
 
-  let thinkies = [];
-  let loading = true;
-  let error = null;
   let selectedThinkie = null;
   let searchQuery = '';
   let searchResults = [];
 
+  $: thinkies = data.thinkies;
+  $: slug = data.slug;
   $: totalInsights = thinkies.reduce((sum, t) => sum + t.insights.length, 0);
   $: isSearching = searchQuery.trim().length > 0;
 
@@ -73,29 +72,6 @@
     searchQuery = '';
     searchResults = [];
   }
-
-  onMount(async () => {
-    try {
-      console.log('Fetching data...');
-      const dataUrl = `${import.meta.env.BASE_URL}conferences/twc-1/data.json`;
-      const response = await fetch(dataUrl);
-      console.log('Response status:', response.status);
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      console.log('Data loaded:', data);
-      thinkies = data.thinkies;
-      console.log('Thinkies:', thinkies);
-      loading = false;
-    } catch (e) {
-      console.error('Error loading data:', e);
-      error = e.message;
-      loading = false;
-    }
-  });
 </script>
 
 <div class="min-h-screen flex flex-col bg-gradient-to-br from-base-200 via-base-100 to-base-200">
@@ -103,7 +79,7 @@
     <div class="container mx-auto px-4 py-12 max-w-7xl">
       {#if !selectedThinkie}
         <div class="text-center mb-8">
-          <button on:click={() => onNavigate('home')} class="btn btn-ghost btn-sm mb-4">
+          <button on:click={() => goto('/')} class="btn btn-ghost btn-sm mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
@@ -123,16 +99,7 @@
         </div>
       {/if}
 
-      {#if loading}
-        <div class="flex justify-center items-center py-20">
-          <span class="loading loading-spinner loading-lg"></span>
-          <p class="ml-4 text-lg">Loading thinkies...</p>
-        </div>
-      {:else if error}
-        <div class="alert alert-error shadow-lg max-w-2xl mx-auto">
-          <p>Error loading data: {error}</p>
-        </div>
-      {:else if thinkies.length === 0}
+      {#if thinkies.length === 0}
         <div class="alert alert-warning shadow-lg max-w-2xl mx-auto">
           <p>No thinkies found!</p>
         </div>
@@ -148,7 +115,7 @@
             <div class="hover-3d selected-card">
               <figure class="w-64 rounded-2xl">
                 <img
-                  src="{import.meta.env.BASE_URL}conferences/twc-1/images/{selectedThinkie.card_image}"
+                  src="/conferences/{slug}/images/{selectedThinkie.card_image}"
                   alt={selectedThinkie.title}
                   class="rounded-2xl shadow-2xl"
                 />
@@ -165,7 +132,7 @@
             </div>
           </div>
           <div class="detail-right">
-            <InsightsList thinkie={selectedThinkie} />
+            <InsightsList thinkie={selectedThinkie} {slug} />
           </div>
         </div>
       {:else if isSearching}
@@ -184,7 +151,7 @@
             >
               <figure class="w-48 rounded-2xl">
                 <img
-                  src="{import.meta.env.BASE_URL}conferences/twc-1/images/{thinkie.card_image}"
+                  src="/conferences/{slug}/images/{thinkie.card_image}"
                   alt={thinkie.title}
                   class="rounded-2xl shadow-lg"
                 />

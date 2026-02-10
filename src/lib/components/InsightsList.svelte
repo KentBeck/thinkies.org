@@ -1,9 +1,10 @@
 <script>
   export let thinkie;
+  export let slug;
 
   // Get PDF filename from card_image by replacing image extension with .pdf
   $: pdfFilename = thinkie.card_image.replace(/\.(jpg|png)$/, '.pdf');
-  $: pdfUrl = `${import.meta.env.BASE_URL}conferences/twc-1/pdf/${pdfFilename}`;
+  $: pdfUrl = `/conferences/${slug}/pdf/${pdfFilename}`;
 </script>
 
 <div class="insights-container">

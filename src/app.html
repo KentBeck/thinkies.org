@@ -8,9 +8,9 @@
       fathom = { trackEvent: function() {} };
     </script>
     <script src="https://cdn.usefathom.com/script.js" data-site="RTEDZVZL" defer></script>
+    %sveltekit.head%
   </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">%sveltekit.body%</div>
   </body>
 </html>

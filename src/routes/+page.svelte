@@ -1,5 +1,5 @@
 <script>
-  export let onNavigate;
+  import { goto } from '$app/navigation';
 </script>
 
 <div class="min-h-screen flex flex-col bg-base-200">
@@ -157,7 +157,7 @@
               <p class="text-neutral">June 4th, 2025</p>
               <p>12 Thinkies discussed, dozens of insights collected</p>
               <div class="card-actions mt-4">
-                <button class="btn-coral" on:click={() => onNavigate('twc-1')}>
+                <button class="btn-coral" on:click={() => goto('/conferences/twc-1/')}>
                   View Conference Results
                 </button>
               </div>
