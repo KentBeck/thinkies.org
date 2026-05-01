@@ -183,7 +183,7 @@
           <div class="pricing-col">
             <div class="pricing-block">
               <p class="pricing-label">Attendee tickets</p>
-              <p class="pricing-item"><span class="pricing-badge pricing-badge--coral">Early bird</span> <strong>$85 USD</strong> until Apr 28</p>
+              <p class="pricing-item"><span class="pricing-badge pricing-badge--coral">Early bird</span> <strong>$85 USD</strong> until May 5</p>
               <p class="pricing-item pricing-item--muted">Regular price: $185 USD</p>
             </div>
             <a href="https://www.eventbrite.com/e/thinkies-world-congress-ii-tickets-1987938370179?aff=oddtdtcreator" class="btn-coral btn-coral-lg pricing-btn">
@@ -280,7 +280,7 @@
           <div class="pricing-col">
             <div class="pricing-block">
               <p class="pricing-label pricing-label--light">Attendee tickets</p>
-              <p class="pricing-item pricing-item--light"><span class="pricing-badge pricing-badge--coral">Early bird</span> <strong>$85 USD</strong> until Apr 28</p>
+              <p class="pricing-item pricing-item--light"><span class="pricing-badge pricing-badge--coral">Early bird</span> <strong>$85 USD</strong> until May 5</p>
               <p class="pricing-item pricing-item--dim">Regular price: $185 USD</p>
             </div>
             <a href="https://www.eventbrite.com/e/thinkies-world-congress-ii-tickets-1987938370179?aff=oddtdtcreator" class="btn-coral btn-coral-lg pricing-btn">
