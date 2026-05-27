@@ -1,0 +1,578 @@
+{
+  "thinkies": [
+    {
+      "title": "Easy Bit - Slot 5 (Overflow)",
+      "scenario": "Brainstorm ideas silently for 3 minutes (facilitator will call time).  Create stickies on the board with your ideas.",
+      "insights": []
+    },
+    {
+      "title": "End to End - Slot 3",
+      "scenario": "You got hired to build a personal finance app that needs to work in Brazil, Mexico, and Spain. The company already brought in tax experts for each country, designers who understand local cultures, localization specialists, security folks, and data analysts for reports. Everyone wants to start &#34;properly&#34; by building the architecture first, then security, then localization... But the CEO wants to see something working in 8 weeks to show investors.",
+      "insights": []
+    },
+    {
+      "title": "Half in a Half - Slot 3",
+      "scenario": "Our team owns an internal tool that is an extension to a SaaS developer tool, integrating 4 internal services to supply 2 specific developer workflows. The agreement with the current vendor ends in 4 months, and so we have to migrate the tools implementation and all users over to the new vendor by that deadline to avoid significant costs. We estimate we need 6 months of time to complete the migration of all integrations and users. How can we make the deadline?",
+      "insights": []
+    },
+    {
+      "title": "Hard Problem - Slot 3",
+      "scenario": "Despite market pressures demanding an &#34;all-in-on-AI by yesterday“ reaction from your company's senior management, it refrained to do so - until now. Yesterday you and your well-rehearsed software development team was tasked with „making Agent-based software development happen&#34;.",
+      "insights": []
+    },
+    {
+      "title": "End to End - Slot 1",
+      "scenario": "You're working on a project to breaking down a large e-commerce monolithic client server application into a set of microservices so it will scale better.  The architecture specs include a lot of technology that is new to the team (new frontend and backend frameworks, adding in API gateway and messaging queues.) Currently, each team is working to build a single micro-service.  The VP of IT is wanting assurances that the new tech is going to work. How can you do that?",
+      "insights": [
+        "Build teh smalll UI then implement the AP to suporting and the DB to suppor that and stand it up with all the tech compontients.",
+        "Do an end to end demo that uses all the components",
+        "Touch as few components as possible at first",
+        "Start with everything returning default success",
+        "Define interfaces for that path",
+        "Pick a full path. Maybe view catalog",
+        "Add more components as things progress"
+      ]
+    },
+    {
+      "title": "Hard Problem - Slot 2",
+      "scenario": "You work for a SaaS company with a popular but aging monolithic platform that customers depend on every day. It is now slow to\n change, hard to scale, and full of behavior no one on the team fully  understands. Leadership wants a path to a more reliable\n  platform, but customers cannot lose critical workflows and the current system still has to keep running. Your team needs to\n  decide how to approach the problem when every obvious starting point seems to create a new risk.",
+      "insights": [
+        "every change breaks someones workflow (even bugfix)",
+        "Too many cooks/code changes in the code causing constant lack of deployablility",
+        "Poor Functional  Isolation",
+        "Not clear how to do incremental changes",
+        "Not understanding what users actually do",
+        "Arcane knowledge needed",
+        "Coupling in the platform",
+        "not sure what problem we are fiixing",
+        "3rd party libraries are no longer mainttained",
+        "lots of things we don't know",
+        "it's big",
+        "The business depends alot on the solution",
+        "lack of knowledge",
+        "lack of support",
+        "lack of mandate",
+        "lack of courage"
+      ]
+    },
+    {
+      "title": "Abundance - Slot 5 (Overflow)",
+      "scenario": "Brainstorm ideas silently for 3 minutes (facilitator will call time).  Create stickies on the board with your ideas.",
+      "insights": []
+    },
+    {
+      "title": "Parallel Decision - Slot 4",
+      "scenario": "A new feature needs to touch a messy part of the codebase. The team knows the area is fragile. Tests are weak. Names are misleading. Responsibilities are scattered.\n\n\nOne engineer wants to refactor first. Another says the business cannot wait and the feature should go in first, with cleanup afterwards.\nRefactoring first could make the change safer, but it could also expand scope before value is delivered. Shipping first could protect time to market, but it may deepen the mess and make the next change worse.\n\n\nThe feature is valuable, but not urgent enough to justify reckless work. The code is bad, but not bad enough to justify an open-ended cleanup.\nDo you refactor first, ship first, or implement one vertical slice both ways: one tiny behaviour change after tidying and one without, then compare the real cost of change?",
+      "insights": []
+    },
+    {
+      "title": "Half in a Half - Slot 4",
+      "scenario": "Our team owns an internal tool that is an extension to a SaaS developer tool, integrating 4 internal services to supply 2 specific developer workflows. The agreement with the current vendor ends in 4 months, and so we have to migrate the tools implementation and all users over to the new vendor by that deadline to avoid significant costs. We estimate we need 6 months of time to complete the migration of all integrations and users. How can we make the deadline?",
+      "insights": []
+    },
+    {
+      "title": "More General Solution - Slot 3",
+      "scenario": "You're working on an organizational effort of breaking down a large monolithic service into a set of microservices. During this transition, you receive a bug report involving multiple services, but as you investigate, you realize there’s no way to correlate log messages across services.",
+      "insights": []
+    },
+    {
+      "title": "Direct Feedback - Slot 3",
+      "scenario": "You are a designer or development team member working on an application that supports a well-established business process. You have a product owner who gives you features and a business owner who is ultimately responsible for the success of the effort. There is a very large population of individuals who will use the application; the population has some very experienced members, some newer members who have recently come from other parts of the business, and some new-hires.",
+      "insights": []
+    },
+    {
+      "title": "Abundance - Slot 2",
+      "scenario": "Your team maintains v1 of a core product while most company attention has shifted to a high-profile v2 launch at an industry conference. A new regulation now requires v1 changes by the same date, or existing customers may have to stop using it. \n\nProduct is worried that pulling people from v2 will weaken the launch, while Legal is worried that treating v1 as leftover work will put current customers at risk. \n\nYour team needs to look for options beyond dividing too little time between two important commitments.",
+      "insights": [
+        "make a v1 org and a v2 org",
+        "Abundance of customers - turn off V1",
+        "launch at the next conference",
+        "Offer to pay customers legal fees",
+        "customers",
+        "$$$",
+        "conferences",
+        "people",
+        "Legal",
+        "Abundance of Devs - do both updates",
+        "Abundance of lawyers- just deal with the legal issues",
+        "Abundance of v1/v2 code interoperability - apply the changes to both",
+        "Give v1 customers a discount / free period",
+        "Give V1 customers V2 for free forever.",
+        "An abundance of..."
+      ]
+    },
+    {
+      "title": "Hard Problem - Slot 1",
+      "scenario": "Since the team started using AI agents (Claude, Cursor, Windsurf, etc.), your &#34;Velocity&#34; has increased by 500%. On paper, you are the most productive team in the company. However, the some developers have a &#34;nagging feeling&#34; that the codebase is becoming a &#34;haunted forest&#34; of generated code that no one fully understands. Management wants to use this new &#34;High Velocity&#34; as the new baseline for all future performance reviews.",
+      "insights": [
+        "Short term productivity gains cannot be replicated in every team or every project",
+        "WHEN something breaks, we are far less certain how to fix it.",
+        "We don't agree on the need to clean code as we go.",
+        "Speed never was the bottleneck when it came to coding - understanding was and still is.",
+        "Mgmt doesn't understand the impact of MORE code on productivity., perforamcna or ultimate outcomes.",
+        "have them explain what they mean by &#34;productivity gain&#34;",
+        "What areas of the codebase are unknown to people?",
+        "The resulting fear / unsecurity / lack of trust in quality might sink the ship.",
+        "Can everyone explain the system and its pieces at a high level?",
+        "What is productivity?",
+        "People can estimate higher complexities",
+        "Lack of feedback loop with quality",
+        "Productivity gains are not measuring full picture",
+        "I'm a domain person. My job relies on me knowing all the things",
+        "Creates wrong incentives",
+        "PEOPLE",
+        "Earlier control was important to management, now loss of control might result.",
+        "Agents create more code than we can keep up with reviewing, leaving a scary traill,",
+        "Communication between management and engineering can be difficult",
+        "Second-order effects",
+        "We haven't figured out the role of testing (all kinds) when working with agents.",
+        "Fear of layoffs",
+        "No agreement on the governance model/constitution for working with agents.",
+        "OPTIMISING FOR METRICS",
+        "the spec doesn't include changes that happen along the way",
+        "What happens in future if the &#34;haunted forest&#34; reanimates?",
+        "Future government restrictions on AI intelligence",
+        "Taking the time to understand and clarify the codebase is seen as unproductive",
+        "Are there noticeable areas of growing tech debt or bugs?",
+        "We might reach a point where any change breaks something else",
+        "Security - what vulnerabilities do we introduce through AI Agents?",
+        "Cost - at some point the cost of AI could go up.",
+        "The pain of unexpected consequences.",
+        "We might start doing no-value work to reach the targets",
+        "Debt",
+        "Is codebase diverging from original/expected design?",
+        "What if the company gets restricted on using the most up-to-date models"
+      ]
+    },
+    {
+      "title": "Direct Feedback - Slot 5 (Overflow)",
+      "scenario": "Brainstorm ideas silently for 3 minutes (facilitator will call time).  Create stickies on the board with your ideas.",
+      "insights": []
+    },
+    {
+      "title": "Easy Bit - Slot 4",
+      "scenario": "You’re on a small team at a payments company, and you’ve been tasked with building a new reconciliation system to track the flow of millions of dollars across countless transactions. There’s a whiteboard full of architecture diagrams related to flow of funds, and payments providers.  There’s some proof of concept code.  You know the system will eventually need API integrations with all external partners, data models to link the payments together, and robust reporting, but that all feels a million miles away. Where do you start?",
+      "insights": []
+    },
+    {
+      "title": "Fun Bit - Slot 3",
+      "scenario": "You're the new engineering lead on an on-prem server VM platform team.\nYour customers, App teams, hate it:: to spin up a VM takes two hours of config options. The platform CLI for managing the VMs is too limitied. Missing QoL features, like a status UI.\nExecs are upset adoption has stalled.\nYour team is demoralised. The backlog is huge.They all have different theories on what to fix first: streamline provisioning, extend the CLI, add a UI, run developer enablement sessions, and just &#34;add AI&#34;. Where do you start?&#96;",
+      "insights": []
+    },
+    {
+      "title": "Hard Problem - Slot 5 (Overflow)",
+      "scenario": "Brainstorm ideas silently for 3 minutes (facilitator will call time).  Create stickies on the board with your ideas.",
+      "insights": []
+    },
+    {
+      "title": "Force Decision - Slot 1",
+      "scenario": "Your team has been running two auth systems in parallel for eight months. Everyone agrees the legacy system needs to go — it's causing duplicated bugs, onboarding confusion, and double the maintenance. The new system handles about 70% of use cases. The remaining 30% are a mix of edge cases, integrations with other teams' systems, and a couple of things nobody fully understands. Every sprint, migration work loses priority to feature delivery. There's no disagreement about whether to cut over. There's just no date. This morning's retro raised it again. Someone said &#34;we really need to sort out the auth migration.&#34; Everyone nodded. The conversation moved on.",
+      "insights": [
+        "Can someone take the work as priority?",
+        "Schedule a mobbing/barn-raising day",
+        "No new feature work until a date is decided.",
+        "&#34;No-one is allowed to get a coffee until we have a date.&#34;",
+        "What if we switched off the old system today?",
+        "The license for the legacy system expires June 30. Figure it out.",
+        "How much time do we lose per sprint by supporting both systems?",
+        "If this is a prioritiy why isn't it a prioritiy?",
+        "What is needed so we actually understand the remaining needed work",
+        "Who want's to champion this and set a date for done?",
+        "Is there a reason we don't want to do this work?"
+      ]
+    },
+    {
+      "title": "Fun Bit - Slot 1",
+      "scenario": "Your new manager just dropped a 400-ticket backlog into your lap — bugs, half-finished features, ancient refactors, and one ticket from 2022 simply titled &#34;fix the thing.&#34; Sprint planning is in two weeks and you're expected to walk in with a plan. You open the list, your eyes glaze over, and you find yourself reorganizing your desk instead. Where do you start?",
+      "insights": [
+        "Take a bug that seems not too hard and write a lot of tests around it.",
+        "Implement a simple ticket. Two persons, the same ticket, and then compare.",
+        "Find the refactoring tickets. Those teach you a lot about the code.",
+        "Use AI to analyze the backlog and find any common themese",
+        "Randomly pick 10 tickets from the backlog and spend no more than 10 minutes on each to get a feel for what you have to tackle",
+        "Find tickets that are close to your competence",
+        "Find the most simple bug that can be fixed and do that",
+        "Find any ticket that makes sense",
+        "sort tickets by complete / incomplete",
+        "take complete tickets and sort by urgency",
+        "Determine what is the priority of the sprint",
+        "Find obsolete tickets and close them out"
+      ]
+    },
+    {
+      "title": "Force Decision - Slot 4",
+      "scenario": "You work for an e-commerce site that produces customisable T-Shirts, their tagline is “Your shirt, your way”.\n\nThe last three months were spent delivering the company’s first AI driven product: “Super You” that turns you (or a loved one) into a superhero via a couple of prompts and an image upload.\nThe Monday morning after the release, the team gather and the product manager is looking a little sheepish.\n\n&#34;So congrats on getting “Super You” out last week. The board love it.” they say, “Now I guess you’re curious about what we’re going to do next. Well…with all the excitement of the last few months, discovery kind of went out of the window and..and we’ve not got anything on the backlog.”\n“Oh yes, and our designer is off on holiday for two weeks and the commercial team are working on the ad campaign for the new shirts.”\n\n\nThe PM has several possible things the team could work on, in various stages of discovery. Some have some rough UX design sketches, some are nothing more than a sentence scribbled down on a post-it a few weeks ago. None are what the team might call “ready”.\n\nThe Engineering Lead has some tech debt incurred during the recent build that the engineers really want to address and a few tech “initiatives” that they’d love to get their teeth stuck into. \n\nThe PM and Engineering Lead start to discuss priorities and are going round in circles, unclear of the cost or impact of anything they have brought to the table. You watch the time tick away...",
+      "insights": []
+    },
+    {
+      "title": "End to End - Slot 5 (Overflow)",
+      "scenario": "Brainstorm ideas silently for 3 minutes (facilitator will call time).  Create stickies on the board with your ideas.",
+      "insights": []
+    },
+    {
+      "title": "Parallel Decision - Slot 3",
+      "scenario": "A new feature needs to touch a messy part of the codebase. The team knows the area is fragile. Tests are weak. Names are misleading. Responsibilities are scattered.\n\n\nOne engineer wants to refactor first. Another says the business cannot wait and the feature should go in first, with cleanup afterwards.\nRefactoring first could make the change safer, but it could also expand scope before value is delivered. Shipping first could protect time to market, but it may deepen the mess and make the next change worse.\n\n\nThe feature is valuable, but not urgent enough to justify reckless work. The code is bad, but not bad enough to justify an open-ended cleanup.\nDo you refactor first, ship first, or implement one vertical slice both ways: one tiny behaviour change after tidying and one without, then compare the real cost of change?",
+      "insights": []
+    },
+    {
+      "title": "Half in a Half - Slot 5 (Overflow)",
+      "scenario": "Brainstorm ideas silently for 3 minutes (facilitator will call time).  Create stickies on the board with your ideas.",
+      "insights": []
+    },
+    {
+      "title": "More General Solution - Slot 4",
+      "scenario": "You're working on an organizational effort of breaking down a large monolithic service into a set of microservices. During this transition, you receive a bug report involving multiple services, but as you investigate, you realize there’s no way to correlate log messages across services.",
+      "insights": []
+    },
+    {
+      "title": "Hard Problem - Slot 4",
+      "scenario": "You're on the platform team at a mid-sized direct to consumer company. For the past nine months, a noticeable number of payments fail in ways that are hard to reproduce. Sometimes a charge goes through but no payment record is created, sometimes the payment record is created twice, sometimes the user is silently logged out mid-flow. Support handles the fallout case by case. No single incident is bad enough to page anyone, but the backlog of customer complaints and refund tickets keeps growing. Two engineers have looked into it at different times and each concluded the cause is &#34;probably&#34; something different. Leadership has asked your team to &#34;finally fix the checkout thing&#34; before the next board meeting in 2 weeks.",
+      "insights": []
+    },
+    {
+      "title": "Abundance - Slot 4",
+      "scenario": "Your team owns & maintains v1 of a core application sold by your company. Unfortunately new sales have been slowing and the company has a new Head of Product rolling out a new &#34;AI first&#34; application suite. Most of the team's attention is focussed on building v2 of the application.  Everyone is heads down preparing for the big v2 launch at an upcoming industry conference.  Out of the blue you are suddenly informed by Head of Legal of a new regulation that will be coming into force around the same time as the conference that requires technical changes to v1.  If these changes aren't made in time existing customers will be forced to stop using v1.   The Head of Product and the Head of Legal both demand that you hit their deadline...",
+      "insights": []
+    },
+    {
+      "title": "More General Solution - Slot 1",
+      "scenario": "You work for a SaaS company that provides online shops for local shoe stores across Europe. Due to popular demand, Bitcoin is being added as a payment method — but all prices are currently displayed in Euros, both in the apps and websites. Prices come from the product API as a numeric value and are rendered in the UI with formatting and a hardcoded Euro symbol.\n\n\nFor example, a shoe with price € 40.87 will need to display ₿ 0.00058 if the user selected BTC as preferred currency.",
+      "insights": [
+        "Sell all shoes for the same price",
+        "Invent a new currency as the base",
+        "Are the same questions applicable to mass/weight? Dimensions? What else?",
+        "How many currencies would a shopper like to see?",
+        "Could monetory units and formatting be a shopper preference?",
+        "&#34;money&#34; as a general concept: formatting, symbol, precision, ...",
+        "Think about Abundance",
+        "Choose a base currency and allow other currencies by a conversion service",
+        "Make it work with different currencies first. Then add bitcoin as a kind of currency.\nAlso an example of &#34;make the change easy&#34;",
+        "How do we handle a variable amount of currencies?",
+        "give products away - initiating a non-monetary economy",
+        "start a global initiative to switch to Euro in both classic & crypto money systems",
+        "allow modifiable user currency",
+        "replace prices with fuzzy stuff like &#34;CHEAP!&#34; or &#34;fancy shmancy&#34;",
+        "Add functionality for any cryptocurrency",
+        "Handle any currency",
+        "Sometimes problems can also be too general?",
+        "Question requirements - do we need to display BTC on listing pages?",
+        "Changing specificity &#61; reframing",
+        "Changed assumption &#61; need to generalise or specialise",
+        "convert to trading goods (vegetables, etc.) instead of money",
+        "Shoecoin"
+      ]
+    },
+    {
+      "title": "Fun Bit - Slot 4",
+      "scenario": "You've been assigned to a new project to modernize a legacy Java application, that hasn't been in active development for many years. The organization has plans for new features that will require changes to the app, and wants to resume active development. The manager for the project is unsure of the current state of the application, and most of the original developers of the application have since left the company.  Where do you start?",
+      "insights": []
+    },
+    {
+      "title": "Fun Bit - Slot 5 (Overflow)",
+      "scenario": "Brainstorm ideas silently for 3 minutes (facilitator will call time).  Create stickies on the board with your ideas.",
+      "insights": []
+    },
+    {
+      "title": "Direct Feedback - Slot 4",
+      "scenario": "You are a designer or development team member working on an application that supports a well-established business process. You have a product owner who gives you features and a business owner who is ultimately responsible for the success of the effort. There is a very large population of individuals who will use the application; the population has some very experienced members, some newer members who have recently come from other parts of the business, and some new-hires.",
+      "insights": []
+    },
+    {
+      "title": "Easy Bit - Slot 1",
+      "scenario": "You've been working on a product. The company decided to consolidate its tech stack, and your Ruby app needs to be migrated to Python. The team is 3 developers: 1 senior, 1 mid, 1 junior. The PM and EM want maximum capacity on the migration. They'll push back to slow client work, but can't give you full-time focus. Bug fixes and feature requests keep coming. New features can be built in Python, but code dependencies don't always split cleanly. You're staring at this Monday morning. The whole thing feels enormous. Where do you even start?",
+      "insights": [
+        "Start identifying an isolated flow(s) that we can start abstracting with a wrapper that calls the python path",
+        "Hi!",
+        "Let the junior dev pick work item first",
+        "Start with writing a small unit test for business logic",
+        "Make a &#34;hello world&#34; app",
+        "Easiest thing &#61; small",
+        "Build a little skeleton in Python that does nothing but we can deploy it with one button",
+        "Make it easy to do easy things , so work should be chunkable",
+        "Cluster features by size and start from a small one",
+        "Deployable version of the smallest peice of that - E2E"
+      ]
+    },
+    {
+      "title": "Abundance - Slot 1",
+      "scenario": "The board has told you to modernise your IBM mainframe Architecture within the next 6 months.  Your team only has 3 developers with the required domain knowledge and depth of skill and language. \nAt the same time the business is implementing 3 new products that this team also needs to support. \nYour 3 developers are taking shortcuts in their planning and execution of the modernisation and the new product implementation in order to keep up with the demand.\n\nWhat would you do if you had enough.",
+      "insights": [
+        "an abundance of Risk",
+        "Pair program everything to share knowledge and make progress",
+        "Creat an Abundance of Focus for the 3 developers",
+        "hire a bunch of IBM consultants and tell them to sort out the modernisation",
+        "make 2 teams so that the developers could only focus on 1 thing at a time",
+        "Can AI tools augment our work to make things better",
+        "Get the 3 devs to only focus on the modernisation",
+        "Hire more engineers",
+        "An abundance of freedom to experiment",
+        "buy millions of claude credits and get claude to modernise and rearchitect the whole mainframe",
+        "Abundance of time, can we defer new products, which is slowing us down more",
+        "an abundance of API's",
+        "Abundance of push back, what can we stop doing",
+        "stop doing one of the things",
+        "pair youngsters with more experienced people",
+        "put juniors on the rearchitecture project with a product manager as a pair",
+        "Put new developers on new projects and keep domain knowledge",
+        "Take the time for longer-term planning to ensure trade-offs are intentional and not accidental",
+        "Identify the project with the lowest barrier to entry and train additional people on that",
+        "Push off one or more projects to focus on the most important elements first",
+        "Take the time getting other developers up to speed on the needed skills and knowledge to get this done",
+        "Take the time needed to complete the project",
+        "Hire consultants with the right skills to focus on certain projects"
+      ]
+    },
+    {
+      "title": "Half in a Half - Slot 2",
+      "scenario": "You are an Engineering Manager, responsible for the productivity of your team. \n\n\nYour organization is rolling out AI coding tools and leadership says they want everyone using a &#34;Dark Factory&#34; tool by the end of the next quarter: no code is read or written by a human. A few engineers are enthusiastic about this, but most are scared and lacking in skills and experience, some mourning the loss of their identity as software craftspeople, reluctant to even get started.\n\nThis goal feels overly ambitious given the human constraints. What will you do?",
+      "insights": [
+        "reduce scope to half the codebase - eg, no code in slice X is read/written by humans",
+        "Get to write no code by hand in 6 weeks",
+        "Every hour. Spend 30 minutes using Dark Factory",
+        "Use Dark Factory to Just Read the Code",
+        "What about having half the teams using it so we can understand the outcomes?",
+        "What about having half of an horizontal half of a product using that? (Ex: just the front-end)",
+        "build isolation and containerization.",
+        "Have half the write/read using the tool? (Ex: just the &#34;write&#34; part)",
+        "Mob for the first 6 weeks to build the first framework together, equalising the levels of the team",
+        "Have 50% of people in each team using it, and 50% suffering to fix all the slop",
+        "Pick one small piece of code and build the factory pipelines until the code quality is maximised.",
+        "send half the team on sabatical",
+        "delete half the code",
+        "fire half the managers",
+        "only work this way for half the day",
+        "build up muscle",
+        "recharge batteries",
+        "&#34;don't go all in, go half in&#34;"
+      ]
+    },
+    {
+      "title": "Force Decision - Slot 5 (Overflow)",
+      "scenario": "Brainstorm ideas silently for 3 minutes (facilitator will call time).  Create stickies on the board with your ideas.",
+      "insights": []
+    },
+    {
+      "title": "End to End - Slot 4",
+      "scenario": "You got hired to build a personal finance app that needs to work in Brazil, Mexico, and Spain. The company already brought in tax experts for each country, designers who understand local cultures, localization specialists, security folks, and data analysts for reports. Everyone wants to start &#34;properly&#34; by building the architecture first, then security, then localization... But the CEO wants to see something working in 8 weeks to show investors.",
+      "insights": []
+    },
+    {
+      "title": "Parallel Decision - Slot 1",
+      "scenario": "A new feature needs to touch a messy part of the codebase. The team knows the area is fragile. Tests are weak. Names are misleading. Responsibilities are scattered.\n\n\nOne engineer wants to refactor first. Another says the business cannot wait and the feature should go in first, with cleanup afterwards.\nRefactoring first could make the change safer, but it could also expand scope before value is delivered. Shipping first could protect time to market, but it may deepen the mess and make the next change worse.\n\n\nThe feature is valuable, but not urgent enough to justify reckless work. The code is bad, but not bad enough to justify an open-ended cleanup.\nDo you refactor first, ship first, or implement one vertical slice both ways: one tiny behaviour change after tidying and one without, then compare the real cost of change?",
+      "insights": [
+        "How little can we do?",
+        "Think smaller",
+        "Refactor &#34;just enough&#34;",
+        "Create a &#34;fork&#34; in the code itself (similar to a strangler pattern).",
+        "Take smaller bites.",
+        "Create two branches, one for the feature another for refactor.",
+        "Clear definition of done for small step",
+        "Timebox both for 1-2 days as experiment",
+        "Don't allow scope creep",
+        "Make sure to write the tests. If all else fails, the tests at least will be in place.",
+        "can an isolated refactor make one part of the feature easier to deliver or is the refactor a big bang?",
+        "Start work bit by bit and do the refactoring for that bit if necessary.",
+        "Explicit requirements for testing when doing feature development",
+        "Make the change easy, make the change",
+        "Flat out refuse to do either.",
+        "Do both, but delay one.",
+        "Is there anything to refactor with the highest reward? Do this first",
+        "Do AI-led refactoring in parallel with feature work",
+        "In the age of AI - run one agent to implement without refactor. \nIt will ideally help to see the messiness if there is one",
+        "Both people pair",
+        "Combine with half-in-half",
+        "Switch feature and refactor in 2 hour increments"
+      ]
+    },
+    {
+      "title": "More General Solution - Slot 2",
+      "scenario": "You're working on an organizational effort of breaking down a large monolithic service into a set of microservices. During this transition, you receive a bug report involving multiple services, but as you investigate, you realize there’s no way to correlate log messages across services.",
+      "insights": []
+    },
+    {
+      "title": "Fun Bit - Slot 2",
+      "scenario": "You're the new engineering lead on an on-prem server VM platform team.\nYour customers, App teams, hate it: to spin up a VM takes two hours of config options. The platform CLI for managing the VMs is too limited. Missing QoL features, like a status UI.\nExecs are upset adoption has stalled.\nYour team is demoralised. The backlog is huge.They all have different theories on what to fix first: streamline provisioning, extend the CLI, add a UI, run developer enablement sessions, and just &#34;add AI&#34;. Where do you start?&#96;",
+      "insights": []
+    },
+    {
+      "title": "Parallel Decision - Slot 2",
+      "scenario": "A new feature needs to touch a messy part of the codebase. The team knows the area is fragile. Tests are weak. Names are misleading. Responsibilities are scattered.\n\n\nOne engineer wants to refactor first. Another says the business cannot wait and the feature should go in first, with cleanup afterwards.\nRefactoring first could make the change safer, but it could also expand scope before value is delivered. Shipping first could protect time to market, but it may deepen the mess and make the next change worse.\n\n\nThe feature is valuable, but not urgent enough to justify reckless work. The code is bad, but not bad enough to justify an open-ended cleanup.\nDo you refactor first, ship first, or implement one vertical slice both ways: one tiny behaviour change after tidying and one without, then compare the real cost of change?",
+      "insights": [
+        "what can be probed?",
+        "ship the smallest possible version of the feature while doing the smallest possible version of the refactor",
+        "roll out the feature to half the users",
+        "split the team - half work on refactoring, half on feature development",
+        "make the feature first then refactor while it's rolling out",
+        "divide teams into refactor vs feature and create competition",
+        "time-box many solutions",
+        "Prepare mock-up of the feature and show it to the customer, refactor in parallel",
+        "Ask the 2 most junior people to do 2 different things AT THE SAME TIME",
+        "Break work  items into 2 days slices and LFG",
+        "Decide what want to do, eat the frog or desert first. Do both and see what worked.",
+        "ship the single most important element of the feature while doing the single most important element of the refactor"
+      ]
+    },
+    {
+      "title": "Abundance - Slot 3",
+      "scenario": "Your team works on a legacy CMS. Years of cutting corners has led the system to become a ball of mud, feature delivery is slow, and frequent production issues impact customers. The engineers are demoralized, struggling with gaps in product and technical knowledge. The team wants to do better but are just in survival mode. Also, the company has acquired a competitor, and there is a tight deadline for integrating a new business line. Where would you start?",
+      "insights": []
+    },
+    {
+      "title": "Easy Bit - Slot 2",
+      "scenario": "You are a knowledge worker who is watching the growing excitement around AI with both interest and concern. Interest, because you see indications of great potential; concern, because there are so many tools and opinions that it is hard to comprehend it all. You also don't want to be &#34;left behind&#34; as the opportunities grow.\nWhat is something specific that you notice that you are doing every day (or at least multiple times in a week) that you could try using AI to advise, plan, or even execute?",
+      "insights": [
+        "Flagging emails that haven't received a response",
+        "Helping me fine tune my resume and cover letter",
+        "Researching job opportunities",
+        "Reading through my emails to pull out action items, important emails, etc.",
+        "Reformatting long, rambling emails or presentations into quick bullet lists or tables",
+        "Collect emails on a specific project and summarize to let me know what's happening and what questions are coming up.",
+        "diving through my growing todo list",
+        "suggesting a jumping off point for tasks that are confusing",
+        "identify potential security risks in a system design",
+        "Giving me summary of what happened yesterday in all the e-mails, messages, and meetings I was part of. So that I have an quick overview, where to follow-up and what TODOs I have.",
+        "PR reviews",
+        "Try to connect a new tool (slack, Google drive, datadog, etc.) each day, see what insights the AI can come up with",
+        "tracking down answers to questions that have already been asked",
+        "following up on all the things I'm waiting on from other people",
+        "Keeping track of what's to do/in progress/done across the full team",
+        "Try one small side quest with AI each week (e.g. a small tidy, making a test faster, adding a rubocop rule, etc.)",
+        "Weekly status updates to share up and out",
+        "organizing my enormous pile of utility scripts",
+        "Managing my calendar"
+      ]
+    },
+    {
+      "title": "Force Decision - Slot 2",
+      "scenario": "You work for an e-commerce site that produces customisable T-Shirts, their tagline is “Your shirt, your way”.\n\nThe last three months were spent delivering the company’s first AI driven product: “Super You” that turns you (or a loved one) into a superhero via a couple of prompts and an image upload.\nThe Monday morning after the release, the team gather and the product manager is looking a little sheepish.\n\n&#34;So congrats on getting “Super You” out last week. The board love it.” they say, “Now I guess you’re curious about what we’re going to do next. Well…with all the excitement of the last few months, discovery kind of went out of the window and..and we’ve not got anything on the backlog.”\n“Oh yes, and our designer is off on holiday for two weeks and the commercial team are working on the ad campaign for the new shirts.”\n\n\nThe PM has several possible things the team could work on, in various stages of discovery. Some have some rough UX design sketches, some are nothing more than a sentence scribbled down on a post-it a few weeks ago. None are what the team might call “ready”.\n\nThe Engineering Lead has some tech debt incurred during the recent build that the engineers really want to address and a few tech “initiatives” that they’d love to get their teeth stuck into. \n\nThe PM and Engineering Lead start to discuss priorities and are going round in circles, unclear of the cost or impact of anything they have brought to the table. You watch the time tick away...",
+      "insights": [
+        "tackle debt incurred from recent feature",
+        "Ask PM to choose the work item with the highest value",
+        "Does this lead to fun/easy bit thinkies",
+        "Don't commit to a large changes",
+        "Have eng team vote on highest value tech work",
+        "Ask if team will commit to N weeks/sprints of pure tech debt work",
+        "time box - 1 week?",
+        "Look into the previous outages cause by tech debt to pick one.",
+        "Flip the coin",
+        "What can we do in the given time constraint?"
+      ]
+    },
+    {
+      "title": "More General Solution - Slot 5 (Overflow)",
+      "scenario": "Brainstorm ideas silently for 3 minutes (facilitator will call time).  Create stickies on the board with your ideas.",
+      "insights": []
+    },
+    {
+      "title": "Easy Bit - Slot 3",
+      "scenario": "A friend has been trying to leave their corporate job and start a consulting practice. Fourteen months now. The network is there. Three people have privately told them &#34;when you go solo, send me your rate.&#34; Nothing is missing except the practice itself.\nHere is what is on their list. Register the entity. Set up accounting. Build a site. Write positioning. Decide pricing. Draft a standard contract. Figure out tax obligations in two jurisdictions. Sort out insurance. Choose sole proprietorship or Pte Ltd. Write three case studies without breaching NDAs. Open a separate bank account. Decide whether to use their own name or a brand. Pick invoicing software.\nEvery Saturday morning they open the notebook, look at the list, feel the weight of it, and close it again.",
+      "insights": []
+    },
+    {
+      "title": "Direct Feedback - Slot 1",
+      "scenario": "You are a designer or development team member working on an application that supports a well-established business process. You have a product owner who gives you features and a business owner who is ultimately responsible for the success of the effort. There is a very large population of individuals who will use the application; the population has some very experienced members, some newer members who have recently come from other parts of the business, and some new-hires.",
+      "insights": [
+        "Create a small group of external users that get a pre-release to test with a sample group",
+        "make sure others understand each perspective",
+        "I always state upfront what my perspective is or my style.\nexample - I am a NYer so I speak my mind\nOR\nI like to ask questions it doesn't mean I don't agree",
+        "Create a slack channel for users to just give feedback, no ticket necessary",
+        "Embed feedback channels into the application--&#34;I liked this&#34;, &#34;I didn't like this&#34;",
+        "have new onboarding people provide feedback as part of their onboarding --route directly to eng",
+        "create a monthly user council - make it fun and have incentives - and eng reps attend the user council",
+        "Ask the product and business owners to let the team sit in on a user/customer interview",
+        "bring users to demos and have them provide feedback live",
+        "have shadow sessions every week where eng shadows a user",
+        "Interview new and existing users directly to understand their problems--NOT to talk about the tool you're building",
+        "have a workshop to map the user flow and have design, eng, and users present",
+        "create a pilot program where users get to try new features first - have designers observe and feedback goes direct to eng",
+        "Host discovery sessions where new users are observed using the tool(s) for the very first time--what goes wrong? what goes well?",
+        "go through old user feedback (it's got to be somewhere) and ask users if it's still relevant",
+        "create a feedback scoreboard that shows how many loops are closed",
+        "Play Role Reversal"
+      ]
+    },
+    {
+      "title": "Force Decision - Slot 3",
+      "scenario": "You’re working on a cost-cutting modernization project, but the tech stack is showing its age:\n\n • Build tools: Legacy versions that slow development\n • Version control: Outdated and hard to integrate with modern pipelines\n • Operating system: Windows, which must be migrated to Linux\n\nAll three components need to be replaced. The team is hesitating to make a decision on the the new tools, platforms, and in which order, then no decision has been made yet.",
+      "insights": []
+    },
+    {
+      "title": "End to End - Slot 2",
+      "scenario": "You are hired to lead the migration of a legacy investment platform to the cloud before the next reporting cycle in 4 months. The system is a maze of low-code dashboards, Python pipelines, APIs, reporting tools, spreadsheets, and manual steps. Documentation is thin. Many of the people who understood the system are gone.\nArchitects want the target architecture first. Data teams want the full model defined upfront. Business teams want every workflow mapped before delivery starts. Everyone is making progress. Nobody understands the whole system.\nWhat is the smallest slice we could deliver in 6 weeks that exercises every critical layer end-to-end?",
+      "insights": [
+        "Get at least one representative of each part of the system together in one room. Create connections for communications between the teams and address potential blockers (resentment, shyness, fear of overcommitting to technical decisions, etc)",
+        "Ask each team to make a list of their dependencies/blockers, from most crucial to least crucial. Get at the WHY of why they feel they can't start before they have that thing settled.",
+        "Ask each team to draw a map of the whole system, however incomplete/incorrect that map may be. Meet to discuss the maps and come up with a shared one.",
+        "Emphasize that we need to focus on an Minimum Viable Product. Proof of concept, not delve into every aspect the system will eventually support.",
+        "focus on input-output",
+        "downside - culture",
+        "make the implicit explicit",
+        "bring a representative of each team and discuss way to work and blindspots",
+        "Maybe the first delivery should be logging in and retrieving a customer profile.",
+        "What if the first step was teaching everyone about how the cloud changes thing?",
+        "1. Identify the primary business function of the system--who cares about its outputs?\n\n\n2. Identify the most essential of those outputs--what inputs are used to create those outputs?\n\n\n3. Create a thin, end-to-end version of the system that transforms those inputs into the minimum desirable outputs."
+      ]
+    },
+    {
+      "title": "Half in a Half - Slot 1",
+      "scenario": "Write a book\nYou are an expert in your field and have a few gems of wisdom you need to share with the world. You must write a book.\nChallenge\nIt will solidify your domain expertise and brand, and be as lucrative as it is satisfying. You have been sitting on this for months, years? \nThe task at hand is so overwhelming that every time you think about it, you feel a mix of guilt (for not doing it) and fear (of actually doing it).\nPain\nHow do you get out of this trap and start executing?",
+      "insights": [
+        "I ask myself why I even wanna do this, what happens if I don't?",
+        "Write the first half.",
+        "WHY DO IT\nIt will solidify your domain expertise and brand, and be as lucrative as it is satisfying.",
+        "I ask myself, what about this I don't like and stops me from doing",
+        "Once a week, think about the gems of wisdoms you wanted to share (in your work taht week) and write \nthem",
+        "THE PAIN\nHow do you get out of this trap and start executing!?",
+        "Second half to work on: polish and proof read",
+        "CASE SETUP\nYou are an expert in your field and have a few gems of wisdom you need to share with the world. You must write a book.",
+        "writing at free time and publish a piece each week",
+        "First half of the first half:\n- bullet point ideas",
+        "CHALLENGE - WHY YOU AREN'T DOING IT\nAll great. But! You have been sitting on this for months, years? The task at hand is so overwhelming that every time you think about it, you feel a mix of guilt (for not doing it) and fear (of actually doing it).",
+        "Reserve time slots in your calender in advance and tret them like a paid client meeting",
+        "Write a milestone plan, start with an outline in the style of a press release for your book",
+        "First half to work on :\n- Main points and outline of the book",
+        "Start writing every day and publish in your blog.",
+        "Write the second half.",
+        "Write half of all the chapters.",
+        "Write the easy half.",
+        "Write the 'historical' half",
+        "what if I don't do the parts and aspects I don't like about it?",
+        "Write half of the drafts.",
+        "What if I just feel fine with avoidance of the parts overwhelms me and stop guilt tripping myself.",
+        "Write twice as much as you need and then edit it down to half as long."
+      ]
+    },
+    {
+      "title": "Parallel Decision - Slot 5 (Overflow)",
+      "scenario": "Brainstorm ideas silently for 3 minutes (facilitator will call time).  Create stickies on the board with your ideas.",
+      "insights": []
+    },
+    {
+      "title": "Direct Feedback - Slot 2",
+      "scenario": "You are a designer or development team member working on an application that supports a well-established business process. You have a product owner who gives you features and a business owner who is ultimately responsible for the success of the effort. There is a very large population of individuals who will use the application; the population has some very experienced members, some newer members who have recently come from other parts of the business, and some new-hires.",
+      "insights": [
+        "on code: having some &#34;office-like&#34; voice-chat-only environment to just brabbel your thoughts and questions (timeboxed, exhausting)",
+        "have a users channel (chat)",
+        "host a user meet-up",
+        "user metrics? direct enough?",
+        "interview at least one experienced user and at least one new hire",
+        "as the business owner what success metric they care most about",
+        "add a suggestion box button to the app",
+        "sit with a user, see how they work through the process",
+        "Vibe Coding (to me) was  about AGENCY",
+        "regular chat sessions, like &#34;daily&#34; but without specific task, to figure out how everyone's feeling",
+        "dare to ask when it's good to give/receive direct feedback",
+        "hands-on session, like in the Review let the stakeholders play around instead of  scripted presentation",
+        "Construct 'Users View' of the Dragon. (UML Use Case) while interviewing a few users.",
+        "cross-functional feedback i.e. from QA enginees",
+        "Build requirements and tests around DRAGON from those",
+        "direct communication is most effective, yet hard to plan.\nprovide async option",
+        "present at a topic-related conference",
+        "screencast recordings?",
+        "https://github.com/charmbracelet/vhs for the CLI"
+      ]
+    }
+  ],
+  "exported_at": "2026-05-27T10:51:54.669203Z",
+  "total_count": 50
+}

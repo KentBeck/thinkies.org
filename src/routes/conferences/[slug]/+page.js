@@ -17,5 +17,5 @@ export async function load({ params, fetch }) {
 }
 
 export function entries() {
-  return [{ slug: 'twc-1' }]; // Add twc-2, twc-3, etc. here
+  return [{ slug: 'twc-1' }, { slug: 'twc-2' }];
 }

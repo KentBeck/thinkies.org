@@ -7,6 +7,11 @@
 
   export let data;
 
+  const conferenceInfo = {
+    'twc-1': { title: 'Thinkies World Congress I',  date: 'June 4th, 2025' },
+    'twc-2': { title: 'Thinkies World Congress II', date: 'May 20th, 2026' },
+  };
+
   let selectedThinkie = null;
   let searchQuery = '';
   let searchResults = [];
@@ -15,6 +20,7 @@
   $: slug = data.slug;
   $: totalInsights = thinkies.reduce((sum, t) => sum + t.insights.length, 0);
   $: isSearching = searchQuery.trim().length > 0;
+  $: info = conferenceInfo[slug] ?? { title: slug, date: '' };
 
   function selectThinkie(thinkie) {
     selectedThinkie = thinkie;
@@ -87,10 +93,10 @@
             Back to Thinkies.org
           </button>
           <h1 class="text-6xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Thinkies World Congress I
+            {info.title}
           </h1>
           <p class="text-lg opacity-70 mb-8">
-            On June 4th, 2025, we discussed {thinkies.length} thinkies and collected {totalInsights} insights.
+            On {info.date}, we discussed {thinkies.length} thinkies and collected {totalInsights} insights.
           </p>
           <SearchBar
             bind:searchQuery
