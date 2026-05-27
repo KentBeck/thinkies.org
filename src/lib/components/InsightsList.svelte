@@ -2,8 +2,18 @@
   export let thinkie;
   export let slug;
 
-  // Get PDF filename from card_image by replacing image extension with .pdf
-  $: pdfFilename = thinkie.card_image.replace(/\.(jpg|png)$/, '.pdf');
+  let activeTab = 0;
+
+  $: scenarios = thinkie.scenarios ?? [];
+  $: currentScenario = scenarios[activeTab] ?? { scenario: '', insights: [] };
+  $: hasMultipleScenarios = scenarios.length > 1;
+
+  // Reset to first tab whenever the selected thinkie changes
+  $: thinkie, (activeTab = 0);
+
+  // PDF is only available for TWC-1
+  $: hasPdf = slug === 'twc-1';
+  $: pdfFilename = thinkie.card_image?.replace(/\.(jpg|png)$/, '.pdf');
   $: pdfUrl = `/conferences/${slug}/pdf/${pdfFilename}`;
 </script>
 
@@ -11,30 +21,48 @@
   <div class="mb-6">
     <div class="header-with-download">
       <h2 class="text-3xl font-bold mb-3 text-gray-800">{thinkie.title}</h2>
-      <a
-        href={pdfUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn-coral text-sm flex items-center gap-2"
-        aria-label="Open Miro Board PDF"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="download-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-        </svg>
-        <span>View Miro Board</span>
-      </a>
+      {#if hasPdf}
+        <a
+          href={pdfUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-coral text-sm flex items-center gap-2"
+          aria-label="Open Miro Board PDF"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="download-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+          <span>View Miro Board</span>
+        </a>
+      {/if}
     </div>
+
+    {#if hasMultipleScenarios}
+      <div class="tabs tabs-boxed mb-5" role="tablist">
+        {#each scenarios as _, i}
+          <button
+            role="tab"
+            class="tab {activeTab === i ? 'tab-active' : ''}"
+            aria-selected={activeTab === i}
+            on:click={() => (activeTab = i)}
+          >
+            Scenario {i + 1}
+          </button>
+        {/each}
+      </div>
+    {/if}
+
     <div class="mb-4">
       <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Proposed Scenario:</p>
-      <p class="text-base text-gray-700 leading-relaxed">{thinkie.scenario}</p>
+      <p class="text-base text-gray-700 leading-relaxed">{currentScenario.scenario}</p>
     </div>
-    <div class="badge badge-accent-blue badge-lg">{thinkie.insights.length} insights</div>
+    <div class="badge badge-accent-blue badge-lg">{currentScenario.insights.length} insights</div>
   </div>
 
   <div class="divider"></div>
 
   <div class="space-y-3">
-    {#each thinkie.insights as insight, i}
+    {#each currentScenario.insights as insight, i}
       <div class="insight-card">
         <div class="insight-content">
           <div class="insight-number">{i + 1}</div>

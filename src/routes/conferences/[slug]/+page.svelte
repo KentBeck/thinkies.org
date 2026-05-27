@@ -18,7 +18,8 @@
 
   $: thinkies = data.thinkies;
   $: slug = data.slug;
-  $: totalInsights = thinkies.reduce((sum, t) => sum + t.insights.length, 0);
+  $: totalInsights  = thinkies.reduce((sum, t) => sum + t.scenarios.reduce((s2, sc) => s2 + sc.insights.length, 0), 0);
+  $: totalScenarios = thinkies.reduce((sum, t) => sum + t.scenarios.length, 0);
   $: isSearching = searchQuery.trim().length > 0;
   $: info = conferenceInfo[slug] ?? { title: slug, date: '' };
 
@@ -51,24 +52,24 @@
         });
       }
 
-      // Search in scenario
-      if (thinkie.scenario.toLowerCase().includes(lowerQuery)) {
-        results.push({
-          thinkie,
-          type: 'Scenario',
-          matchedText: thinkie.scenario
-        });
-      }
-
-      // Search in insights
-      thinkie.insights.forEach(insight => {
-        if (insight.toLowerCase().includes(lowerQuery)) {
+      // Search across all scenarios and their insights
+      thinkie.scenarios.forEach(s => {
+        if (s.scenario.toLowerCase().includes(lowerQuery)) {
           results.push({
             thinkie,
-            type: 'Insight',
-            matchedText: insight
+            type: 'Scenario',
+            matchedText: s.scenario
           });
         }
+        s.insights.forEach(insight => {
+          if (insight.toLowerCase().includes(lowerQuery)) {
+            results.push({
+              thinkie,
+              type: 'Insight',
+              matchedText: insight
+            });
+          }
+        });
       });
     });
 
@@ -96,7 +97,11 @@
             {info.title}
           </h1>
           <p class="text-lg opacity-70 mb-8">
-            On {info.date}, we discussed {thinkies.length} thinkies and collected {totalInsights} insights.
+            {#if totalScenarios > thinkies.length}
+              On {info.date}, we discussed {thinkies.length} thinkies across {totalScenarios} scenarios and collected {totalInsights} insights.
+            {:else}
+              On {info.date}, we discussed {thinkies.length} thinkies and collected {totalInsights} insights.
+            {/if}
           </p>
           <SearchBar
             bind:searchQuery

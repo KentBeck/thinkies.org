@@ -1,9 +1,5 @@
 <script>
   import { base } from '$app/paths';
-  function scrollToJoin(e) {
-    e.preventDefault();
-    document.getElementById('join')?.scrollIntoView({ behavior: 'smooth' });
-  }
 
   const panelists = [
     {
@@ -72,7 +68,7 @@
       <p class="text-2xl font-semibold text-white/90 mb-3">A Creative Gathering for Unsticking Stuck Thinking</p>
       <p class="text-xl text-white/80 mb-4">May 20th, 2026</p>
       <p class="text-lg text-white/80 mb-8">8:00am to 11:00am Pacific Time (5pm – 8pm CET)</p>
-      <a href="#join" on:click={scrollToJoin} class="btn-coral btn-coral-lg">Join the Event</a>
+      <a href="{base}/conferences/twc-2" class="btn-coral btn-coral-lg">See the Insights We Generated →</a>
     </div>
   </header>
 
@@ -171,35 +167,18 @@
       </div>
     </section>
 
-    <!-- Inline CTA (white bg, solid buttons) -->
+    <!-- Post-event CTA -->
     <section class="py-20 px-4 bg-base-100">
       <div class="container mx-auto max-w-2xl text-center">
-        <h2 class="text-3xl font-bold mb-4">Ready to Unstick Your Thinking?</h2>
+        <h2 class="text-3xl font-bold mb-4">The Congress Has Spoken 🌱</h2>
         <p class="text-lg mb-10 text-neutral">
-          Join as an <strong>attendee</strong> or step up as a <strong>Thinkies facilitator</strong> and guide a table discussion.
-          Once you have your ticket, we'll send everything you need.
+          On May 20th, 2026, participants from around the world gathered to apply Thinkies to real software
+          challenges. We discussed <strong>10 thinkies</strong> and generated <strong>304 insights</strong> —
+          all open source and available right here.
         </p>
-        <div class="pricing-grid">
-          <div class="pricing-col">
-            <div class="pricing-block">
-              <p class="pricing-label">Attendee tickets</p>
-              <p class="pricing-item"><span class="pricing-badge pricing-badge--coral">Early bird</span> <strong>$85 USD</strong> until May 5</p>
-              <p class="pricing-item pricing-item--muted">Regular price: $185 USD</p>
-            </div>
-            <a href="https://www.eventbrite.com/e/thinkies-world-congress-ii-tickets-1987938370179?aff=oddtdtcreator" class="btn-coral btn-coral-lg pricing-btn">
-              Join as Attendee
-            </a>
-          </div>
-          <div class="pricing-col">
-            <div class="pricing-block">
-              <p class="pricing-label">Facilitator tickets</p>
-              <p class="pricing-item"><strong>$0</strong> with in-kind contribution of helping out</p>
-            </div>
-            <a href="https://www.eventbrite.com/e/thinkies-world-congress-ii-facilitator-signup-tickets-1987937202687?aff=oddtdtcreator" class="btn-solid-purple pricing-btn">
-              Join as Facilitator
-            </a>
-          </div>
-        </div>
+        <a href="{base}/conferences/twc-2" class="btn-coral btn-coral-lg">
+          See the Insights We Generated →
+        </a>
       </div>
     </section>
 
@@ -267,36 +246,17 @@
       </div>
     </section>
 
-    <!-- Join Section (dark gradient, outline buttons) -->
-    <section id="join" class="py-20 px-4 twc2-join-bg">
+    <!-- Post-event insights CTA (dark gradient) -->
+    <section class="py-20 px-4 twc2-join-bg">
       <div class="container mx-auto max-w-2xl text-center">
-        <h2 class="text-3xl font-bold mb-6 text-white">Ready to Join?</h2>
+        <h2 class="text-3xl font-bold mb-6 text-white">What Did We Come Up With?</h2>
         <p class="text-white/85 text-lg mb-10">
-          You can join as an <strong class="text-white">attendee</strong> or as a
-          <strong class="text-white">Thinkies facilitator</strong> and help guide a table discussion.
-          Once you have your ticket, we'll send everything you need to participate in the event.
+          Explore <strong class="text-white">304 insights</strong> across <strong class="text-white">10 thinkies</strong>,
+          contributed by participants from around the world. All ideas are open source — dig in, share, and build on them.
         </p>
-        <div class="pricing-grid pricing-grid--dark">
-          <div class="pricing-col">
-            <div class="pricing-block">
-              <p class="pricing-label pricing-label--light">Attendee tickets</p>
-              <p class="pricing-item pricing-item--light"><span class="pricing-badge pricing-badge--coral">Early bird</span> <strong>$85 USD</strong> until May 5</p>
-              <p class="pricing-item pricing-item--dim">Regular price: $185 USD</p>
-            </div>
-            <a href="https://www.eventbrite.com/e/thinkies-world-congress-ii-tickets-1987938370179?aff=oddtdtcreator" class="btn-coral btn-coral-lg pricing-btn">
-              Join as Attendee
-            </a>
-          </div>
-          <div class="pricing-col">
-            <div class="pricing-block">
-              <p class="pricing-label pricing-label--light">Facilitator tickets</p>
-              <p class="pricing-item pricing-item--light"><strong>$0</strong> with in-kind contribution of helping out</p>
-            </div>
-            <a href="https://www.eventbrite.com/e/thinkies-world-congress-ii-facilitator-signup-tickets-1987937202687?aff=oddtdtcreator" class="btn-outline-white btn-coral-lg pricing-btn">
-              Join as Facilitator
-            </a>
-          </div>
-        </div>
+        <a href="{base}/conferences/twc-2" class="btn-coral btn-coral-lg">
+          Explore the Insights →
+        </a>
       </div>
     </section>
   </main>
