@@ -60,14 +60,14 @@
           ]
         },
         {
-          "scenario": "Since the team started using AI agents (Claude, Cursor, Windsurf, etc.), your &#34;Velocity&#34; has increased by 500%. On paper, you are the most productive team in the company. However, the some developers have a &#34;nagging feeling&#34; that the codebase is becoming a &#34;haunted forest&#34; of generated code that no one fully understands. Management wants to use this new &#34;High Velocity&#34; as the new baseline for all future performance reviews.",
+          "scenario": "Since the team started using AI agents (Claude, Cursor, Windsurf, etc.), your \"Velocity\" has increased by 500%. On paper, you are the most productive team in the company. However, the some developers have a \"nagging feeling\" that the codebase is becoming a \"haunted forest\" of generated code that no one fully understands. Management wants to use this new \"High Velocity\" as the new baseline for all future performance reviews.",
           "insights": [
             "Short term productivity gains cannot be replicated in every team or every project",
             "WHEN something breaks, we are far less certain how to fix it.",
             "We don't agree on the need to clean code as we go.",
             "Speed never was the bottleneck when it came to coding - understanding was and still is.",
             "Mgmt doesn't understand the impact of MORE code on productivity., perforamcna or ultimate outcomes.",
-            "have them explain what they mean by &#34;productivity gain&#34;",
+            "have them explain what they mean by \"productivity gain\"",
             "What areas of the codebase are unknown to people?",
             "The resulting fear / unsecurity / lack of trust in quality might sink the ship.",
             "Can everyone explain the system and its pieces at a high level?",
@@ -87,7 +87,7 @@
             "No agreement on the governance model/constitution for working with agents.",
             "OPTIMISING FOR METRICS",
             "the spec doesn't include changes that happen along the way",
-            "What happens in future if the &#34;haunted forest&#34; reanimates?",
+            "What happens in future if the \"haunted forest\" reanimates?",
             "Future government restrictions on AI intelligence",
             "Taking the time to understand and clarify the codebase is seen as unproductive",
             "Are there noticeable areas of growing tech debt or bugs?",
@@ -162,12 +162,12 @@
       "card_image": "force_decision.png",
       "scenarios": [
         {
-          "scenario": "Your team has been running two auth systems in parallel for eight months. Everyone agrees the legacy system needs to go — it's causing duplicated bugs, onboarding confusion, and double the maintenance. The new system handles about 70% of use cases. The remaining 30% are a mix of edge cases, integrations with other teams' systems, and a couple of things nobody fully understands. Every sprint, migration work loses priority to feature delivery. There's no disagreement about whether to cut over. There's just no date. This morning's retro raised it again. Someone said &#34;we really need to sort out the auth migration.&#34; Everyone nodded. The conversation moved on.",
+          "scenario": "Your team has been running two auth systems in parallel for eight months. Everyone agrees the legacy system needs to go — it's causing duplicated bugs, onboarding confusion, and double the maintenance. The new system handles about 70% of use cases. The remaining 30% are a mix of edge cases, integrations with other teams' systems, and a couple of things nobody fully understands. Every sprint, migration work loses priority to feature delivery. There's no disagreement about whether to cut over. There's just no date. This morning's retro raised it again. Someone said \"we really need to sort out the auth migration.\" Everyone nodded. The conversation moved on.",
           "insights": [
             "Can someone take the work as priority?",
             "Schedule a mobbing/barn-raising day",
             "No new feature work until a date is decided.",
-            "&#34;No-one is allowed to get a coffee until we have a date.&#34;",
+            "\"No-one is allowed to get a coffee until we have a date.\"",
             "What if we switched off the old system today?",
             "The license for the legacy system expires June 30. Figure it out.",
             "How much time do we lose per sprint by supporting both systems?",
@@ -178,7 +178,7 @@
           ]
         },
         {
-          "scenario": "You work for an e-commerce site that produces customisable T-Shirts, their tagline is “Your shirt, your way”.\n\nThe last three months were spent delivering the company’s first AI driven product: “Super You” that turns you (or a loved one) into a superhero via a couple of prompts and an image upload.\nThe Monday morning after the release, the team gather and the product manager is looking a little sheepish.\n\n&#34;So congrats on getting “Super You” out last week. The board love it.” they say, “Now I guess you’re curious about what we’re going to do next. Well…with all the excitement of the last few months, discovery kind of went out of the window and..and we’ve not got anything on the backlog.”\n“Oh yes, and our designer is off on holiday for two weeks and the commercial team are working on the ad campaign for the new shirts.”\n\n\nThe PM has several possible things the team could work on, in various stages of discovery. Some have some rough UX design sketches, some are nothing more than a sentence scribbled down on a post-it a few weeks ago. None are what the team might call “ready”.\n\nThe Engineering Lead has some tech debt incurred during the recent build that the engineers really want to address and a few tech “initiatives” that they’d love to get their teeth stuck into. \n\nThe PM and Engineering Lead start to discuss priorities and are going round in circles, unclear of the cost or impact of anything they have brought to the table. You watch the time tick away...",
+          "scenario": "You work for an e-commerce site that produces customisable T-Shirts, their tagline is “Your shirt, your way”.\n\nThe last three months were spent delivering the company’s first AI driven product: “Super You” that turns you (or a loved one) into a superhero via a couple of prompts and an image upload.\nThe Monday morning after the release, the team gather and the product manager is looking a little sheepish.\n\n\"So congrats on getting “Super You” out last week. The board love it.” they say, “Now I guess you’re curious about what we’re going to do next. Well…with all the excitement of the last few months, discovery kind of went out of the window and..and we’ve not got anything on the backlog.”\n“Oh yes, and our designer is off on holiday for two weeks and the commercial team are working on the ad campaign for the new shirts.”\n\n\nThe PM has several possible things the team could work on, in various stages of discovery. Some have some rough UX design sketches, some are nothing more than a sentence scribbled down on a post-it a few weeks ago. None are what the team might call “ready”.\n\nThe Engineering Lead has some tech debt incurred during the recent build that the engineers really want to address and a few tech “initiatives” that they’d love to get their teeth stuck into. \n\nThe PM and Engineering Lead start to discuss priorities and are going round in circles, unclear of the cost or impact of anything they have brought to the table. You watch the time tick away...",
           "insights": [
             "tackle debt incurred from recent feature",
             "Ask PM to choose the work item with the highest value",
@@ -199,7 +199,7 @@
       "card_image": "fun_bit.png",
       "scenarios": [
         {
-          "scenario": "Your new manager just dropped a 400-ticket backlog into your lap — bugs, half-finished features, ancient refactors, and one ticket from 2022 simply titled &#34;fix the thing.&#34; Sprint planning is in two weeks and you're expected to walk in with a plan. You open the list, your eyes glaze over, and you find yourself reorganizing your desk instead. Where do you start?",
+          "scenario": "Your new manager just dropped a 400-ticket backlog into your lap — bugs, half-finished features, ancient refactors, and one ticket from 2022 simply titled \"fix the thing.\" Sprint planning is in two weeks and you're expected to walk in with a plan. You open the list, your eyes glaze over, and you find yourself reorganizing your desk instead. Where do you start?",
           "insights": [
             "Take a bug that seems not too hard and write a lot of tests around it.",
             "Implement a simple ticket. Two persons, the same ticket, and then compare.",
@@ -229,21 +229,21 @@
             "Are the same questions applicable to mass/weight? Dimensions? What else?",
             "How many currencies would a shopper like to see?",
             "Could monetory units and formatting be a shopper preference?",
-            "&#34;money&#34; as a general concept: formatting, symbol, precision, ...",
+            "\"money\" as a general concept: formatting, symbol, precision, ...",
             "Think about Abundance",
             "Choose a base currency and allow other currencies by a conversion service",
-            "Make it work with different currencies first. Then add bitcoin as a kind of currency.\nAlso an example of &#34;make the change easy&#34;",
+            "Make it work with different currencies first. Then add bitcoin as a kind of currency.\nAlso an example of \"make the change easy\"",
             "How do we handle a variable amount of currencies?",
             "give products away - initiating a non-monetary economy",
             "start a global initiative to switch to Euro in both classic & crypto money systems",
             "allow modifiable user currency",
-            "replace prices with fuzzy stuff like &#34;CHEAP!&#34; or &#34;fancy shmancy&#34;",
+            "replace prices with fuzzy stuff like \"CHEAP!\" or \"fancy shmancy\"",
             "Add functionality for any cryptocurrency",
             "Handle any currency",
             "Sometimes problems can also be too general?",
             "Question requirements - do we need to display BTC on listing pages?",
-            "Changing specificity &#61; reframing",
-            "Changed assumption &#61; need to generalise or specialise",
+            "Changing specificity = reframing",
+            "Changed assumption = need to generalise or specialise",
             "convert to trading goods (vegetables, etc.) instead of money",
             "Shoecoin"
           ]
@@ -261,8 +261,8 @@
             "Hi!",
             "Let the junior dev pick work item first",
             "Start with writing a small unit test for business logic",
-            "Make a &#34;hello world&#34; app",
-            "Easiest thing &#61; small",
+            "Make a \"hello world\" app",
+            "Easiest thing = small",
             "Build a little skeleton in Python that does nothing but we can deploy it with one button",
             "Make it easy to do easy things , so work should be chunkable",
             "Cluster features by size and start from a small one",
@@ -270,7 +270,7 @@
           ]
         },
         {
-          "scenario": "You are a knowledge worker who is watching the growing excitement around AI with both interest and concern. Interest, because you see indications of great potential; concern, because there are so many tools and opinions that it is hard to comprehend it all. You also don't want to be &#34;left behind&#34; as the opportunities grow.\nWhat is something specific that you notice that you are doing every day (or at least multiple times in a week) that you could try using AI to advise, plan, or even execute?",
+          "scenario": "You are a knowledge worker who is watching the growing excitement around AI with both interest and concern. Interest, because you see indications of great potential; concern, because there are so many tools and opinions that it is hard to comprehend it all. You also don't want to be \"left behind\" as the opportunities grow.\nWhat is something specific that you notice that you are doing every day (or at least multiple times in a week) that you could try using AI to advise, plan, or even execute?",
           "insights": [
             "Flagging emails that haven't received a response",
             "Helping me fine tune my resume and cover letter",
@@ -300,7 +300,7 @@
       "card_image": "half_in_a_half.png",
       "scenarios": [
         {
-          "scenario": "You are an Engineering Manager, responsible for the productivity of your team. \n\n\nYour organization is rolling out AI coding tools and leadership says they want everyone using a &#34;Dark Factory&#34; tool by the end of the next quarter: no code is read or written by a human. A few engineers are enthusiastic about this, but most are scared and lacking in skills and experience, some mourning the loss of their identity as software craftspeople, reluctant to even get started.\n\nThis goal feels overly ambitious given the human constraints. What will you do?",
+          "scenario": "You are an Engineering Manager, responsible for the productivity of your team. \n\n\nYour organization is rolling out AI coding tools and leadership says they want everyone using a \"Dark Factory\" tool by the end of the next quarter: no code is read or written by a human. A few engineers are enthusiastic about this, but most are scared and lacking in skills and experience, some mourning the loss of their identity as software craftspeople, reluctant to even get started.\n\nThis goal feels overly ambitious given the human constraints. What will you do?",
           "insights": [
             "reduce scope to half the codebase - eg, no code in slice X is read/written by humans",
             "Get to write no code by hand in 6 weeks",
@@ -309,7 +309,7 @@
             "What about having half the teams using it so we can understand the outcomes?",
             "What about having half of an horizontal half of a product using that? (Ex: just the front-end)",
             "build isolation and containerization.",
-            "Have half the write/read using the tool? (Ex: just the &#34;write&#34; part)",
+            "Have half the write/read using the tool? (Ex: just the \"write\" part)",
             "Mob for the first 6 weeks to build the first framework together, equalising the levels of the team",
             "Have 50% of people in each team using it, and 50% suffering to fix all the slop",
             "Pick one small piece of code and build the factory pipelines until the code quality is maximised.",
@@ -319,7 +319,7 @@
             "only work this way for half the day",
             "build up muscle",
             "recharge batteries",
-            "&#34;don't go all in, go half in&#34;"
+            "\"don't go all in, go half in\""
           ]
         },
         {
@@ -361,8 +361,8 @@
           "insights": [
             "How little can we do?",
             "Think smaller",
-            "Refactor &#34;just enough&#34;",
-            "Create a &#34;fork&#34; in the code itself (similar to a strangler pattern).",
+            "Refactor \"just enough\"",
+            "Create a \"fork\" in the code itself (similar to a strangler pattern).",
             "Take smaller bites.",
             "Create two branches, one for the feature another for refactor.",
             "Clear definition of done for small step",
@@ -413,7 +413,7 @@
             "make sure others understand each perspective",
             "I always state upfront what my perspective is or my style.\nexample - I am a NYer so I speak my mind\nOR\nI like to ask questions it doesn't mean I don't agree",
             "Create a slack channel for users to just give feedback, no ticket necessary",
-            "Embed feedback channels into the application--&#34;I liked this&#34;, &#34;I didn't like this&#34;",
+            "Embed feedback channels into the application--\"I liked this\", \"I didn't like this\"",
             "have new onboarding people provide feedback as part of their onboarding --route directly to eng",
             "create a monthly user council - make it fun and have incentives - and eng reps attend the user council",
             "Ask the product and business owners to let the team sit in on a user/customer interview",
@@ -431,7 +431,7 @@
         {
           "scenario": "You are a designer or development team member working on an application that supports a well-established business process. You have a product owner who gives you features and a business owner who is ultimately responsible for the success of the effort. There is a very large population of individuals who will use the application; the population has some very experienced members, some newer members who have recently come from other parts of the business, and some new-hires.",
           "insights": [
-            "on code: having some &#34;office-like&#34; voice-chat-only environment to just brabbel your thoughts and questions (timeboxed, exhausting)",
+            "on code: having some \"office-like\" voice-chat-only environment to just brabbel your thoughts and questions (timeboxed, exhausting)",
             "have a users channel (chat)",
             "host a user meet-up",
             "user metrics? direct enough?",
@@ -440,7 +440,7 @@
             "add a suggestion box button to the app",
             "sit with a user, see how they work through the process",
             "Vibe Coding (to me) was  about AGENCY",
-            "regular chat sessions, like &#34;daily&#34; but without specific task, to figure out how everyone's feeling",
+            "regular chat sessions, like \"daily\" but without specific task, to figure out how everyone's feeling",
             "dare to ask when it's good to give/receive direct feedback",
             "hands-on session, like in the Review let the stakeholders play around instead of  scripted presentation",
             "Construct 'Users View' of the Dragon. (UML Use Case) while interviewing a few users.",

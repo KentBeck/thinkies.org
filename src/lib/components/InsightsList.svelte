@@ -38,11 +38,11 @@
     </div>
 
     {#if hasMultipleScenarios}
-      <div class="tabs tabs-boxed mb-5" role="tablist">
+      <div class="scenario-tabs" role="tablist">
         {#each scenarios as _, i}
           <button
             role="tab"
-            class="tab {activeTab === i ? 'tab-active' : ''}"
+            class="scenario-tab {activeTab === i ? 'scenario-tab--active' : ''}"
             aria-selected={activeTab === i}
             on:click={() => (activeTab = i)}
           >
@@ -74,6 +74,38 @@
 </div>
 
 <style>
+  /* ── Scenario tabs ─────────────────────────────────────── */
+  .scenario-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid #e5e7eb;
+    margin-bottom: 1.25rem;
+  }
+
+  .scenario-tab {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #6b7280;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    cursor: pointer;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    white-space: nowrap;
+  }
+
+  .scenario-tab:hover {
+    color: #374151;
+  }
+
+  .scenario-tab--active {
+    color: #1877F2;
+    border-bottom-color: #1877F2;
+  }
+
+  /* ── Rest of component ─────────────────────────────────── */
   .header-with-download {
     display: flex;
     align-items: flex-start;
