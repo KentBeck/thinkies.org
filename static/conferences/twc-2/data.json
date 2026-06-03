@@ -39,27 +39,6 @@
       "card_image": "hard_problem.png",
       "scenarios": [
         {
-          "scenario": "You work for a SaaS company with a popular but aging monolithic platform that customers depend on every day. It is now slow to\n change, hard to scale, and full of behavior no one on the team fully  understands. Leadership wants a path to a more reliable\n  platform, but customers cannot lose critical workflows and the current system still has to keep running. Your team needs to\n  decide how to approach the problem when every obvious starting point seems to create a new risk.",
-          "insights": [
-            "every change breaks someones workflow (even bugfix)",
-            "Too many cooks/code changes in the code causing constant lack of deployablility",
-            "Poor Functional  Isolation",
-            "Not clear how to do incremental changes",
-            "Not understanding what users actually do",
-            "Arcane knowledge needed",
-            "Coupling in the platform",
-            "not sure what problem we are fiixing",
-            "3rd party libraries are no longer mainttained",
-            "lots of things we don't know",
-            "it's big",
-            "The business depends alot on the solution",
-            "lack of knowledge",
-            "lack of support",
-            "lack of mandate",
-            "lack of courage"
-          ]
-        },
-        {
           "scenario": "Since the team started using AI agents (Claude, Cursor, Windsurf, etc.), your \"Velocity\" has increased by 500%. On paper, you are the most productive team in the company. However, the some developers have a \"nagging feeling\" that the codebase is becoming a \"haunted forest\" of generated code that no one fully understands. Management wants to use this new \"High Velocity\" as the new baseline for all future performance reviews.",
           "insights": [
             "Short term productivity gains cannot be replicated in every team or every project",
@@ -100,6 +79,27 @@
             "Is codebase diverging from original/expected design?",
             "What if the company gets restricted on using the most up-to-date models"
           ]
+        },
+        {
+          "scenario": "You work for a SaaS company with a popular but aging monolithic platform that customers depend on every day. It is now slow to\n change, hard to scale, and full of behavior no one on the team fully  understands. Leadership wants a path to a more reliable\n  platform, but customers cannot lose critical workflows and the current system still has to keep running. Your team needs to\n  decide how to approach the problem when every obvious starting point seems to create a new risk.",
+          "insights": [
+            "every change breaks someones workflow (even bugfix)",
+            "Too many cooks/code changes in the code causing constant lack of deployablility",
+            "Poor Functional  Isolation",
+            "Not clear how to do incremental changes",
+            "Not understanding what users actually do",
+            "Arcane knowledge needed",
+            "Coupling in the platform",
+            "not sure what problem we are fiixing",
+            "3rd party libraries are no longer mainttained",
+            "lots of things we don't know",
+            "it's big",
+            "The business depends alot on the solution",
+            "lack of knowledge",
+            "lack of support",
+            "lack of mandate",
+            "lack of courage"
+          ]
         }
       ]
     },
@@ -107,26 +107,6 @@
       "title": "Abundance",
       "card_image": "abundance.png",
       "scenarios": [
-        {
-          "scenario": "Your team maintains v1 of a core product while most company attention has shifted to a high-profile v2 launch at an industry conference. A new regulation now requires v1 changes by the same date, or existing customers may have to stop using it. \n\nProduct is worried that pulling people from v2 will weaken the launch, while Legal is worried that treating v1 as leftover work will put current customers at risk. \n\nYour team needs to look for options beyond dividing too little time between two important commitments.",
-          "insights": [
-            "make a v1 org and a v2 org",
-            "Abundance of customers - turn off V1",
-            "launch at the next conference",
-            "Offer to pay customers legal fees",
-            "customers",
-            "$$$",
-            "conferences",
-            "people",
-            "Legal",
-            "Abundance of Devs - do both updates",
-            "Abundance of lawyers- just deal with the legal issues",
-            "Abundance of v1/v2 code interoperability - apply the changes to both",
-            "Give v1 customers a discount / free period",
-            "Give V1 customers V2 for free forever.",
-            "An abundance of..."
-          ]
-        },
         {
           "scenario": "The board has told you to modernise your IBM mainframe Architecture within the next 6 months.  Your team only has 3 developers with the required domain knowledge and depth of skill and language. \nAt the same time the business is implementing 3 new products that this team also needs to support. \nYour 3 developers are taking shortcuts in their planning and execution of the modernisation and the new product implementation in order to keep up with the demand.\n\nWhat would you do if you had enough.",
           "insights": [
@@ -153,6 +133,26 @@
             "Take the time getting other developers up to speed on the needed skills and knowledge to get this done",
             "Take the time needed to complete the project",
             "Hire consultants with the right skills to focus on certain projects"
+          ]
+        },
+        {
+          "scenario": "Your team maintains v1 of a core product while most company attention has shifted to a high-profile v2 launch at an industry conference. A new regulation now requires v1 changes by the same date, or existing customers may have to stop using it. \n\nProduct is worried that pulling people from v2 will weaken the launch, while Legal is worried that treating v1 as leftover work will put current customers at risk. \n\nYour team needs to look for options beyond dividing too little time between two important commitments.",
+          "insights": [
+            "make a v1 org and a v2 org",
+            "Abundance of customers - turn off V1",
+            "launch at the next conference",
+            "Offer to pay customers legal fees",
+            "customers",
+            "$$$",
+            "conferences",
+            "people",
+            "Legal",
+            "Abundance of Devs - do both updates",
+            "Abundance of lawyers- just deal with the legal issues",
+            "Abundance of v1/v2 code interoperability - apply the changes to both",
+            "Give v1 customers a discount / free period",
+            "Give V1 customers V2 for free forever.",
+            "An abundance of..."
           ]
         }
       ]
@@ -214,6 +214,24 @@
             "Determine what is the priority of the sprint",
             "Find obsolete tickets and close them out"
           ]
+        },
+        {
+          "scenario": "You're the new engineering lead on an on-prem server VM platform team.\nYour customers, App teams, hate it: to spin up a VM takes two hours of config options. The platform CLI for managing the VMs is too limited. Missing QoL features, like a status UI.\nExecs are upset adoption has stalled.\nYour team is demoralised. The backlog is huge.They all have different theories on what to fix first: streamline provisioning, extend the CLI, add a UI, run developer enablement sessions, and just \"add AI\". Where do you start?`",
+          "insights": [
+            "Status widget  bake-off - pick winners to add to a  gallery of options",
+            "do we have some user feedback? what wishes or problems are most mentioned? -> they're all probably fun in some way, but we should do the most imnpactful",
+            "Spend a day in the customer's shoes (shoulder surfing)",
+            "Gamify the Onboarding. Turn it into a quest",
+            "Use AI to generate common and unique automation for deployments an scalling",
+            "play \"user\" - each of us temporarily goes working in an App team to see what are the worst problems",
+            "Introduce Feature Flags",
+            "IF no user feedback, add \"user feedback\" feature - pop in \"Give feedback\" widgets all over (or at least in the tricky sections) UI/CLI",
+            "Use the competing external products the app teams like",
+            "have AI prototype some UX improvements",
+            "Host app team hackathon focused on using CLI",
+            "Analyse usage logs",
+            "Archive the whole backlog"
+          ]
         }
       ]
     },
@@ -247,6 +265,10 @@
             "convert to trading goods (vegetables, etc.) instead of money",
             "Shoecoin"
           ]
+        },
+        {
+          "scenario": "You're working on an organizational effort of breaking down a large monolithic service into a set of microservices. During this transition, you receive a bug report involving multiple services, but as you investigate, you realize there’s no way to correlate log messages across services.",
+          "insights": []
         }
       ]
     },
@@ -300,29 +322,6 @@
       "card_image": "half_in_a_half.png",
       "scenarios": [
         {
-          "scenario": "You are an Engineering Manager, responsible for the productivity of your team. \n\n\nYour organization is rolling out AI coding tools and leadership says they want everyone using a \"Dark Factory\" tool by the end of the next quarter: no code is read or written by a human. A few engineers are enthusiastic about this, but most are scared and lacking in skills and experience, some mourning the loss of their identity as software craftspeople, reluctant to even get started.\n\nThis goal feels overly ambitious given the human constraints. What will you do?",
-          "insights": [
-            "reduce scope to half the codebase - eg, no code in slice X is read/written by humans",
-            "Get to write no code by hand in 6 weeks",
-            "Every hour. Spend 30 minutes using Dark Factory",
-            "Use Dark Factory to Just Read the Code",
-            "What about having half the teams using it so we can understand the outcomes?",
-            "What about having half of an horizontal half of a product using that? (Ex: just the front-end)",
-            "build isolation and containerization.",
-            "Have half the write/read using the tool? (Ex: just the \"write\" part)",
-            "Mob for the first 6 weeks to build the first framework together, equalising the levels of the team",
-            "Have 50% of people in each team using it, and 50% suffering to fix all the slop",
-            "Pick one small piece of code and build the factory pipelines until the code quality is maximised.",
-            "send half the team on sabatical",
-            "delete half the code",
-            "fire half the managers",
-            "only work this way for half the day",
-            "build up muscle",
-            "recharge batteries",
-            "\"don't go all in, go half in\""
-          ]
-        },
-        {
           "scenario": "Write a book\nYou are an expert in your field and have a few gems of wisdom you need to share with the world. You must write a book.\nChallenge\nIt will solidify your domain expertise and brand, and be as lucrative as it is satisfying. You have been sitting on this for months, years? \nThe task at hand is so overwhelming that every time you think about it, you feel a mix of guilt (for not doing it) and fear (of actually doing it).\nPain\nHow do you get out of this trap and start executing?",
           "insights": [
             "I ask myself why I even wanna do this, what happens if I don't?",
@@ -348,6 +347,29 @@
             "Write half of the drafts.",
             "What if I just feel fine with avoidance of the parts overwhelms me and stop guilt tripping myself.",
             "Write twice as much as you need and then edit it down to half as long."
+          ]
+        },
+        {
+          "scenario": "You are an Engineering Manager, responsible for the productivity of your team. \n\n\nYour organization is rolling out AI coding tools and leadership says they want everyone using a \"Dark Factory\" tool by the end of the next quarter: no code is read or written by a human. A few engineers are enthusiastic about this, but most are scared and lacking in skills and experience, some mourning the loss of their identity as software craftspeople, reluctant to even get started.\n\nThis goal feels overly ambitious given the human constraints. What will you do?",
+          "insights": [
+            "reduce scope to half the codebase - eg, no code in slice X is read/written by humans",
+            "Get to write no code by hand in 6 weeks",
+            "Every hour. Spend 30 minutes using Dark Factory",
+            "Use Dark Factory to Just Read the Code",
+            "What about having half the teams using it so we can understand the outcomes?",
+            "What about having half of an horizontal half of a product using that? (Ex: just the front-end)",
+            "build isolation and containerization.",
+            "Have half the write/read using the tool? (Ex: just the \"write\" part)",
+            "Mob for the first 6 weeks to build the first framework together, equalising the levels of the team",
+            "Have 50% of people in each team using it, and 50% suffering to fix all the slop",
+            "Pick one small piece of code and build the factory pipelines until the code quality is maximised.",
+            "send half the team on sabatical",
+            "delete half the code",
+            "fire half the managers",
+            "only work this way for half the day",
+            "build up muscle",
+            "recharge batteries",
+            "\"don't go all in, go half in\""
           ]
         }
       ]
@@ -450,6 +472,86 @@
             "present at a topic-related conference",
             "screencast recordings?",
             "https://github.com/charmbracelet/vhs for the CLI"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Put Skin in the Game",
+      "card_image": "put_skin_in_the_game.png",
+      "scenarios": [
+        {
+          "scenario": "You manage the roadmap for a product where a subset of customers consistently struggle with the time allocation features--confusing calculations and slow loading times. Customer success has flagged it for three quarters, but each time it gets bumped for new feature work. Each time you review the metrics with the engineering and product leadership, they categorize the impact as \"within acceptable SLA thresholds.\" Most of the affected customers are on legacy plans and lack strong executive sponsors. You're starting to suspect the people setting those SLA thresholds would set them differently if they were the ones reading the support tickets.",
+          "insights": [
+            "Align Core KPIs (Inputs = Outputs)",
+            "Share ownership directly [zero BS]\n(share in Profit / Loss)\n\n\nMAKE / LOSE MONEY TOGETHER",
+            "Leaders answer directly to customers",
+            "Have engineering and product leadership use the time allocation features for their work.",
+            "Work BOTH front to back and back to front",
+            "For critical path endpoints (dashboards), allign requirements and backend facilities",
+            "Work the UX Information Model FIRST.",
+            "Customer KPIs",
+            "Delivery Team\nKPIs",
+            "Show the lagging functionality during the sync call",
+            "The PM is answering the questions themselves",
+            "Every quearter read the three loudest support tickets",
+            "Leaders do user acceptance testing"
+          ]
+        },
+        {
+          "scenario": "Management at your company is sold on AI coding agents after using them for small tasks and prototypes. Now they want Engineering to finish, by the end of the quarter, a major platform restructuring originally estimated at one year.\n\n\nEngineering uses AI too, but the team is alarmed. Leadership is extrapolating from low-risk tasks to high-risk system work, and the deadline is already forcing rushed decisions. \nConcerns have been raised about what might break, who will carry the burden, and whether speed is being mistaken for progress. Leadership keeps asking for more speed.\n\n\nHow could the team “put skin in the game” so decision-makers directly experience the risks and trade-offs of this AI-agent strategy before scaling it across the entire company?",
+          "insights": [
+            "Ask for an estimation of available token budget for the task and approve it.",
+            "Get management to use AI to forecast the investments needed to speed up high risk system work, and decide to spend the amount",
+            "Have everyone share an example of how AI didn't execute well on a task or project they have expertise in",
+            "Propose to use AI agents to do other important work in the company - e.g. accounting.",
+            "Ask the managers to create a plan using AI agents and commit to that plan.",
+            "Have everyone try AI on a Difficult task and share where the AI gaps are",
+            "Have the decision makers choose a difficult task to use AI on and share their findings."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Obviously",
+      "card_image": "obviously.png",
+      "scenarios": [
+        {
+          "scenario": "Your team is modernizing a legacy application. In a planning meeting, a key stakeholder says, “Obviously, we need Feature X integrated into the new platform for the initial launch, as it's critical for our biggest client.\" What do you do?",
+          "insights": [
+            "Obiviously, it would be important to conduct a new customer discovery process to confirm priorities before proceeding.",
+            "Obviously we should not replicate the same behavior in the new version, so we need to do some research first",
+            "Obiviously, what evidence do we have to proceed with this feature X?",
+            "Question whether it would also be a must for the 2nd biggest client. Observe chaos ensuing. :)",
+            "What if we delay it for after the launch? What would happen?",
+            "Obviously we should prioritize features on total usage across All clients",
+            "Obviously we should keep feature X in the legacy application until after the launch. It's too important to risk breaking.",
+            "Do we really need it ? Let's ask the client how important that feature is by using a quick rating, and dig further if needed",
+            "let's discuss all the priorities and then we can look at how the features fit together",
+            "Obviously we could launch without it and find a simpler way to achieve the same outcome",
+            "Give a feature Y as an alternative and check whether we have 2 prio 1"
+          ]
+        },
+        {
+          "scenario": "\"Obviously using AI to increase output is what our clients want.\" You work for a consulting firm that largely supplies software engineering staff augmentation.\n\n\nMake the opposite assumption. Think about what may not be so obvious. What are the assumptions in the statement? Come up with 5 or more thoughts (stickies).",
+          "insights": [
+            "client doesn't understand AI; is afraid",
+            "What if our clients don't know how they want to use AI?",
+            "What if \"increased output\" isn't the ultimate goal?",
+            "What if our clients want to use AI to grow their staff",
+            "The hype is strong in AI - what if it is too early for going \"all in\"?",
+            "what if clients care about outcomes and output is a distraction",
+            "what if our clients don't want to use AI at all",
+            "People might be overwhelmed by too much output.",
+            "What about downstream processes? Can they absorb more output?",
+            "heavily regulated, must read every line of code",
+            "increased output moves the bottleneck - who will make sense of it all?",
+            "Oviously our clients don't want us using AI, they're paying for engineering.",
+            "what if our clients want more considered outcomes not more output",
+            "What if our clients want to use AI to help them discern what to build instead of just building everything that no one wants",
+            "What if clients actually don't want more outcomes not more output",
+            "Cognition is a scarce resource. Too much output might be problematic.",
+            "What if our clients want AI to help them reduce complexity"
           ]
         }
       ]
