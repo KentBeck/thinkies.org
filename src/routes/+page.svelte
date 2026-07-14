@@ -1,6 +1,7 @@
 <script>
   import { goto } from '$app/navigation';
   import { base } from '$app/paths';
+  import { nextEvent } from '$lib/data/exploring-stuckness.js';
 </script>
 
 <div class="min-h-screen flex flex-col bg-base-200">
@@ -12,18 +13,19 @@
     </div>
   </header>
 
-  <!-- TWC II Banner -->
-  <div class="twc2-banner px-4 py-10">
+  <!-- Exploring Stuckness Banner -->
+  <div class="stuckness-banner px-4 py-10">
     <div class="container mx-auto max-w-5xl flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="text-white text-center md:text-left">
-        <p class="text-xs font-semibold uppercase tracking-widest text-white/60 mb-1">Upcoming Virtual Event · May 20th, 2026</p>
-        <h2 class="text-2xl md:text-3xl font-bold mb-2">Thinkies World Congress II</h2>
+        <p class="text-xs font-semibold uppercase tracking-widest text-white/60 mb-1">Upcoming Community Workshop · {nextEvent.dateLong}</p>
+        <h2 class="text-2xl md:text-3xl font-bold mb-2">Exploring Stuckness</h2>
         <p class="text-white/80 max-w-xl">
-          A hands-on virtual unconference where you practice using Thinkies to unstick stuck thinking.
-          Join us to generate fresh ideas and collaborate with creative thinkers worldwide.
+          Every month, someone brings a real stuckness they're facing in software development.
+          We build a shared understanding of it, then use Thinkies to find new ways of looking at
+          the challenge — and see if we can get unstuck together.
         </p>
       </div>
-      <a href="{base}/congress/twc-2/" class="btn-coral btn-coral-lg whitespace-nowrap shrink-0">
+      <a href="{base}/exploring-stuckness/" class="btn-coral btn-coral-lg whitespace-nowrap shrink-0">
         Learn More
       </a>
     </div>
@@ -182,15 +184,17 @@
             </div>
           </div>
           <!-- TWC II -->
-          <div class="card twc2-card w-full max-w-md">
+          <div class="card bg-base-100 border-2 border-accent-blue w-full max-w-md">
             <div class="card-body items-center text-center">
-              <span class="badge badge-sm text-white/80 border-white/30 border mb-1 bg-transparent uppercase tracking-wider text-xs">Upcoming</span>
-              <h3 class="card-title text-2xl text-white">TWC II</h3>
-              <p class="text-white/70">May 20th, 2026</p>
-              <p class="text-white/85">A virtual unconference — practice Thinkies with creative thinkers worldwide</p>
-              <div class="card-actions mt-4">
-                <a href="{base}/congress/twc-2/" class="btn-outline-white-sm">
-                  Learn More
+              <h3 class="card-title text-2xl text-primary">TWC II</h3>
+              <p class="text-neutral">May 20th, 2026</p>
+              <p>10 Thinkies discussed, 304 insights collected</p>
+              <div class="card-actions mt-4 flex-col items-center gap-2">
+                <button class="btn-coral" on:click={() => goto(`${base}/conferences/twc-2/`)}>
+                  View Congress Results
+                </button>
+                <a href="{base}/congress/twc-2/" class="link link-hover text-sm text-neutral">
+                  About the event →
                 </a>
               </div>
             </div>
@@ -240,31 +244,7 @@
     background: linear-gradient(160deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   }
 
-  .twc2-banner {
-    background: linear-gradient(160deg, #0f3460 0%, #533483 70%, #3b1f6b 100%);
-  }
-
-  .twc2-card {
-    background: linear-gradient(135deg, #0f3460 0%, #533483 100%);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    color: white;
-  }
-
-  .btn-outline-white-sm {
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-    padding: 0.5rem 1.25rem;
-    border-radius: 0.5rem;
-    font-weight: 600;
-    font-size: 0.875rem;
-    transition: background-color 0.2s ease, color 0.2s ease;
-    text-decoration: none;
-    display: inline-block;
-  }
-
-  .btn-outline-white-sm:hover {
-    background: white;
-    color: #0f3460;
+  .stuckness-banner {
+    background: linear-gradient(160deg, #1a1a2e 0%, #2d1b4e 55%, #533483 100%);
   }
 </style>
