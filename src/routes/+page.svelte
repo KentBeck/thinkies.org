@@ -241,7 +241,7 @@
         <button class="btn-coral join-item">Subscribe</button>
       </div>
       <p>
-        &copy; 2025 Thinkies. All rights reserved.
+        &copy; 2025 Kent Beck. All rights reserved.
         <a href="{base}/organizers/" class="link link-hover ml-2">Organizing Team</a>
         <a href="{base}/privacy.html" class="link link-hover ml-2">Privacy Policy</a>
         <a href="{base}/code_of_conduct.html" class="link link-hover ml-2">Code of Conduct</a>
