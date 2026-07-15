@@ -1,6 +1,10 @@
 <script>
   import { base } from '$app/paths';
 
+  const pageTitle = 'Thinkies World Congress II · A Creative Gathering for Unsticking Stuck Thinking';
+  const pageDescription =
+    'A hands-on virtual unconference where participants practiced using Thinkies to unstick stuck thinking. Explore the insights we generated together.';
+
   const panelists = [
     {
       name: 'Sowmya Somanath',
@@ -57,6 +61,15 @@
     { time: '11:00am',   activity: 'Conference Ends',                                       room: '',             highlight: false }
   ];
 </script>
+
+<svelte:head>
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDescription} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={pageDescription} />
+  <meta name="twitter:card" content="summary" />
+</svelte:head>
 
 <div class="min-h-screen flex flex-col bg-base-200">
 
@@ -278,6 +291,8 @@
         <a href="{base}/" class="link font-semibold">Back to thinkies.org</a>
       </p>
       <p class="text-sm opacity-60">
+        <a href="{base}/organizers/" class="link link-hover">Organizing Team</a>
+        <span class="mx-2">·</span>
         <a href="{base}/code_of_conduct.html" class="link link-hover">Code of Conduct</a>
         <span class="mx-2">·</span>
         <a href="{base}/privacy.html" class="link link-hover">Privacy Policy</a>

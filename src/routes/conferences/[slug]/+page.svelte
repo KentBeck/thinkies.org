@@ -22,6 +22,10 @@
   $: totalScenarios = thinkies.reduce((sum, t) => sum + t.scenarios.length, 0);
   $: isSearching = searchQuery.trim().length > 0;
   $: info = conferenceInfo[slug] ?? { title: slug, date: '' };
+  $: pageTitle = `${info.title} · Results`;
+  $: pageDescription = info.date
+    ? `On ${info.date}, we discussed ${thinkies.length} thinkies and collected ${totalInsights} insights — all open source and searchable here.`
+    : `Insights from ${info.title}.`;
 
   function selectThinkie(thinkie) {
     selectedThinkie = thinkie;
@@ -81,6 +85,15 @@
     searchResults = [];
   }
 </script>
+
+<svelte:head>
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDescription} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={pageDescription} />
+  <meta name="twitter:card" content="summary" />
+</svelte:head>
 
 <div class="min-h-screen flex flex-col bg-gradient-to-br from-base-200 via-base-100 to-base-200">
   <main class="flex-grow">

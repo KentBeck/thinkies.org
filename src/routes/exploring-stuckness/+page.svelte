@@ -12,6 +12,9 @@
     thinkies
   } from '$lib/data/exploring-stuckness.js';
 
+  const pageDescription =
+    'A monthly community gathering for exploring our real experiences of stuckness in software development — then using Thinkies to get unstuck.';
+
   // The vignette description carries one marker-pen highlight; split around it
   // so the copy itself stays plain text in the data module.
   const [beforeHighlight, afterHighlight] = nextEvent.description.split(
@@ -21,10 +24,11 @@
 
 <svelte:head>
   <title>Exploring Stuckness · A Monthly Community Workshop</title>
-  <meta
-    name="description"
-    content="A monthly community gathering for exploring our real experiences of stuckness in software development — then using Thinkies to get unstuck."
-  />
+  <meta name="description" content={pageDescription} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Exploring Stuckness · A Monthly Community Workshop" />
+  <meta property="og:description" content={pageDescription} />
+  <meta name="twitter:card" content="summary" />
 </svelte:head>
 
 <div class="es-page">
@@ -261,6 +265,7 @@
   <nav class="footer-bar">
     <div class="es-container">
       <a href="{base}/">Back to thinkies.org</a>
+      <a href="{base}/organizers/">Organizing Team</a>
       <a href="{base}/code_of_conduct.html">Code of Conduct</a>
       <a href="{base}/privacy.html">Privacy Policy</a>
     </div>

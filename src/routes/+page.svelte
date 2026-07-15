@@ -2,7 +2,20 @@
   import { goto } from '$app/navigation';
   import { base } from '$app/paths';
   import { nextEvent } from '$lib/data/exploring-stuckness.js';
+
+  const pageTitle = 'Thinkies · Patterns for Creative Thinking';
+  const pageDescription =
+    'Thinkies are pattern-based tools for creative problem solving — learnable moves that help you see differently and get unstuck.';
 </script>
+
+<svelte:head>
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDescription} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={pageDescription} />
+  <meta name="twitter:card" content="summary" />
+</svelte:head>
 
 <div class="min-h-screen flex flex-col bg-base-200">
   <!-- Hero Section -->
@@ -175,7 +188,7 @@
             <div class="card-body items-center text-center">
               <h3 class="card-title text-2xl text-primary">TWC I</h3>
               <p class="text-neutral">June 4th, 2025</p>
-              <p>12 Thinkies discussed, dozens of insights collected</p>
+              <p>12 Thinkies discussed, 216 insights collected</p>
               <div class="card-actions mt-4">
                 <button class="btn-coral" on:click={() => goto(`${base}/conferences/twc-1/`)}>
                   View Congress Results
@@ -188,14 +201,11 @@
             <div class="card-body items-center text-center">
               <h3 class="card-title text-2xl text-primary">TWC II</h3>
               <p class="text-neutral">May 20th, 2026</p>
-              <p>10 Thinkies discussed, 304 insights collected</p>
-              <div class="card-actions mt-4 flex-col items-center gap-2">
+              <p>12 Thinkies discussed, 365 insights collected</p>
+              <div class="card-actions mt-4">
                 <button class="btn-coral" on:click={() => goto(`${base}/conferences/twc-2/`)}>
                   View Congress Results
                 </button>
-                <a href="{base}/congress/twc-2/" class="link link-hover text-sm text-neutral">
-                  About the event →
-                </a>
               </div>
             </div>
           </div>
@@ -232,6 +242,7 @@
       </div>
       <p>
         &copy; 2025 Thinkies. All rights reserved.
+        <a href="{base}/organizers/" class="link link-hover ml-2">Organizing Team</a>
         <a href="{base}/privacy.html" class="link link-hover ml-2">Privacy Policy</a>
         <a href="{base}/code_of_conduct.html" class="link link-hover ml-2">Code of Conduct</a>
       </p>
