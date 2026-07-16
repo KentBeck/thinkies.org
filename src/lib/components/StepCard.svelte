@@ -27,6 +27,9 @@
       0 12px 40px rgba(26, 26, 46, 0.16),
       0 4px 12px rgba(26, 26, 46, 0.08);
     transition: transform 0.25s;
+    /* Grid items default to min-width: auto, which lets a wide child (like
+       the illustration) keep the track from shrinking on narrow screens. */
+    min-width: 0;
   }
 
   .step-card:hover {

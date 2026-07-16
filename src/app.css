@@ -99,8 +99,16 @@
     border: 1px solid #ccc;
     border-radius: 0.5rem 0 0 0.5rem;
     width: 16rem;
+    max-width: 100%;
+    /* Safari won't shrink a text input below its default intrinsic size
+       inside a flex row unless min-width is reset explicitly. */
+    min-width: 0;
     background-color: white;
     color: #333;
+  }
+
+  .footer .join {
+    max-width: 100%;
   }
 
   .input-email::placeholder {

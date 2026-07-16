@@ -611,14 +611,14 @@
 
   .how-it-works .steps {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.75rem;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 
-  @media (max-width: 720px) {
+  @media (min-width: 720px) {
     .how-it-works .steps {
-      grid-template-columns: 1fr;
-      gap: 1.25rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
     }
   }
 
@@ -757,15 +757,22 @@
      sit on a quieter second line. */
   .event-meta-primary {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1.25rem;
     margin-bottom: 1rem;
   }
 
   .event-meta-secondary {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .event-meta-primary,
+    .event-meta-secondary {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   .meta-box {
@@ -773,6 +780,11 @@
     background: var(--purple-soft);
     border: 1px solid rgba(83, 52, 131, 0.12);
     border-radius: var(--radius-md);
+    /* Grid items default to min-width: auto, which can keep a track from
+       shrinking below its content's natural size and push it past the
+       container edge — force it to respect the track width instead. */
+    min-width: 0;
+    overflow-wrap: break-word;
   }
 
   .meta-box .label {
@@ -806,13 +818,6 @@
 
   .meta-box--secondary .value {
     font-size: 0.98rem;
-  }
-
-  @media (max-width: 640px) {
-    .event-meta-primary,
-    .event-meta-secondary {
-      grid-template-columns: 1fr;
-    }
   }
 
   /* ─── PEOPLE ─── */
@@ -887,7 +892,10 @@
   .kent-note {
     display: inline-flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 0.85rem;
+    max-width: 100%;
     background: #fff;
     border: 1px solid var(--border);
     border-radius: var(--radius-full);
