@@ -96,7 +96,7 @@
           practitioners thinking together and getting practice with Thinkies in a
           real-world context.
         </p>
-        <div class="steps">
+        <div class="es-steps">
           {#each steps as step}
             <StepCard {step} />
           {/each}
@@ -149,11 +149,11 @@
           <div class="event-meta">
             <div class="event-meta-primary">
               <div class="meta-box">
-                <span class="label">Community Member Experiencing the Stuck</span>
+                <span class="meta-label">Community Member Experiencing the Stuck</span>
                 <span class="value">{nextEvent.communityMember}</span>
               </div>
               <div class="meta-box">
-                <span class="label">Special Guest</span>
+                <span class="meta-label">Special Guest</span>
                 <span class="value">
                   {nextEvent.specialGuest}
                   <span class="sub">{nextEvent.specialGuestNote}</span>
@@ -162,11 +162,11 @@
             </div>
             <div class="event-meta-secondary">
               <div class="meta-box meta-box--secondary">
-                <span class="label">Your Co-Hosts</span>
+                <span class="meta-label">Your Co-Hosts</span>
                 <span class="value">{nextEvent.coHosts}</span>
               </div>
               <div class="meta-box meta-box--secondary">
-                <span class="label">Date &amp; Time</span>
+                <span class="meta-label">Date &amp; Time</span>
                 <span class="value">
                   {nextEvent.dateLong}
                   <span class="sub">{nextEvent.time}</span>
@@ -609,14 +609,19 @@
     background: var(--bg-warm);
   }
 
-  .how-it-works .steps {
+  /* This container was originally class="steps", which silently collided with
+     DaisyUI's global `.steps` component (display:inline-grid; grid-auto-flow:
+     column). Those unset properties leaked through and forced the cards into
+     side-by-side columns at every viewport width, so it was renamed to
+     .es-steps to avoid the collision. */
+  .how-it-works .es-steps {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
 
   @media (min-width: 720px) {
-    .how-it-works .steps {
+    .how-it-works .es-steps {
       grid-template-columns: repeat(3, 1fr);
       gap: 1.75rem;
     }
@@ -787,7 +792,11 @@
     overflow-wrap: break-word;
   }
 
-  .meta-box .label {
+  /* Renamed from .label, which collided with DaisyUI's global `.label`
+     (white-space: nowrap) — that leaked in and stopped long titles like
+     "Community Member Experiencing the Stuck" from wrapping, overflowing the
+     box. */
+  .meta-box .meta-label {
     font-size: 0.68rem;
     font-weight: 700;
     text-transform: uppercase;
