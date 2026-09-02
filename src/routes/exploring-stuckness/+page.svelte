@@ -41,6 +41,7 @@
           <li><a href="#how-it-works">How It Works</a></li>
           <li><a href="#thinkies-map">The Thinkies</a></li>
           <li><a href="#next-vignette">Next Vignette</a></li>
+          <li><a href="{base}/exploring-stuckness/past/">Past Vignettes</a></li>
         </ul>
         <a
           href={eventbriteUrl}
@@ -77,7 +78,7 @@
         if we can get ourselves unstuck.
       </p>
       <a href="#next-vignette" class="scroll-link">
-        Join the conversation on August 12th ↓
+        Join the conversation on {nextEvent.dateCasual} ↓
       </a>
     </div>
   </header>
@@ -152,13 +153,6 @@
                 <span class="meta-label">Community Member Experiencing the Stuck</span>
                 <span class="value">{nextEvent.communityMember}</span>
               </div>
-              <div class="meta-box">
-                <span class="meta-label">Special Guest</span>
-                <span class="value">
-                  {nextEvent.specialGuest}
-                  <span class="sub">{nextEvent.specialGuestNote}</span>
-                </span>
-              </div>
             </div>
             <div class="event-meta-secondary">
               <div class="meta-box meta-box--secondary">
@@ -192,7 +186,7 @@
 
         <div class="people-head">
           <h3>Who you'll be exploring with</h3>
-          <p>The people bringing, framing, and hosting this month's stuckness.</p>
+          <p>The people bringing and hosting this month's stuckness.</p>
         </div>
         <div class="people-grid">
           {#each people as person, i}
@@ -273,230 +267,15 @@
 </div>
 
 <style>
-  /* This page keeps its own light, editorial look — it deliberately sits apart
-     from the daisyUI theme used by the rest of the site. */
-  .es-page {
-    --purple: #533483;
-    --purple-deep: #422a6a;
-    --purple-soft: #f3eeff;
-    --coral: #fd5353;
-    --coral-deep: #e64545;
-    --teal: #0d9488;
-    --navy-1: #1a1a2e;
-    --plum: #2d1b4e;
-
-    --bg: #ffffff;
-    --bg-warm: #f7f6fb;
-    --fg: #1a1a2e;
-    --fg-soft: #3a3a52;
-    --muted: #6b6b80;
-    --border: #e7e4f0;
-
-    --marker-yellow: #fde047;
-    --marker-purple: #d8b4fe;
-    --marker-green: #86efac;
-    --marker-orange: #fdba74;
-
-    --radius-md: 12px;
-    --radius-lg: 20px;
-    --radius-full: 9999px;
-
-    --shadow-sm: 0 1px 3px rgba(26, 26, 46, 0.08);
-    --shadow-lg:
-      0 12px 40px rgba(26, 26, 46, 0.16), 0 4px 12px rgba(26, 26, 46, 0.08);
-
-    background: var(--bg);
-    color: var(--fg);
-    line-height: 1.65;
-    overflow-x: hidden;
-  }
-
-  .es-container {
-    max-width: 72rem;
-    margin: 0 auto;
-    padding: 0 clamp(1.25rem, 4vw, 3rem);
-  }
-
-  /* ─── HIGHLIGHTER MARKS ─── */
-  /* A background gradient (rather than an absolutely-placed ::before) so the
-     marker wraps line-by-line on mobile instead of smearing across the box. */
-  .hl {
-    --hl-color: var(--marker-yellow);
-    background-image: linear-gradient(
-      transparent 52%,
-      var(--hl-color) 52%,
-      var(--hl-color) 94%,
-      transparent 94%
-    );
-    background-repeat: no-repeat;
-    padding: 0 0.06em;
-    border-radius: 2px;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-  }
-  .hl-purple {
-    --hl-color: var(--marker-purple);
-  }
-  .hl-green {
-    --hl-color: var(--marker-green);
-  }
-  .hl-orange {
-    --hl-color: var(--marker-orange);
-  }
-
-  /* ─── NAV / TOP BAR ─── */
-  .es-nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--border);
-  }
-
-  .es-nav .es-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    height: 3.9rem;
-  }
-
-  .es-nav .brand {
-    font-weight: 800;
-    font-size: 1.05rem;
-    color: var(--fg);
-    text-decoration: none;
-    letter-spacing: -0.02em;
-    white-space: nowrap;
-  }
-
-  .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .nav-links a {
-    font-size: 0.88rem;
-    font-weight: 600;
-    color: var(--muted);
-    text-decoration: none;
-    transition: color 0.15s;
-  }
-
-  .nav-links a:hover {
-    color: var(--purple);
-  }
-
-  .next-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--purple);
-    background: var(--purple-soft);
-    border: 1px solid rgba(83, 52, 131, 0.18);
-    padding: 0.4rem 0.9rem;
-    border-radius: var(--radius-full);
-    text-decoration: none;
-    white-space: nowrap;
-    transition: all 0.2s;
-  }
-
-  .next-pill:hover {
-    background: #eae2ff;
-    transform: translateY(-1px);
-  }
-
-  .next-pill .dot {
-    width: 8px;
-    height: 8px;
-    background: var(--coral);
-    border-radius: 50%;
-    animation: pulse 2s ease-in-out infinite;
-    flex-shrink: 0;
-  }
-
-  .next-pill strong {
-    color: var(--fg);
-    font-weight: 700;
-  }
-
-  @keyframes pulse {
-    0%,
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.55;
-      transform: scale(0.8);
-    }
-  }
+  /* The shared shell — design tokens, container, highlighter marks, nav,
+     coral button and footer — lives in src/app.css under `.es-page`, so this
+     page and /exploring-stuckness/past/ stay in visual sync. Only styling
+     unique to this page is scoped here. */
 
   @media (prefers-reduced-motion: reduce) {
-    .next-pill .dot,
     .event-label::before {
       animation: none;
     }
-  }
-
-  @media (max-width: 860px) {
-    .nav-links {
-      display: none;
-    }
-  }
-
-  @media (max-width: 520px) {
-    .next-pill .label-long {
-      display: none;
-    }
-  }
-
-  /* ─── CORAL BUTTON ─── */
-  .btn-es-coral {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    background: var(--coral);
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.05rem;
-    padding: 1rem 2.25rem;
-    border-radius: var(--radius-full);
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: 0 6px 20px rgba(253, 83, 83, 0.35);
-  }
-
-  .btn-es-coral:hover {
-    background: var(--coral-deep);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 32px rgba(253, 83, 83, 0.45);
-  }
-
-  .btn-es-coral svg {
-    width: 1.05em;
-    height: 1.05em;
-    fill: currentColor;
-    transition: transform 0.2s;
-  }
-
-  .btn-es-coral:hover svg {
-    transform: translate(2px, -2px);
   }
 
   /* ─── HERO ─── */
@@ -758,8 +537,8 @@
     margin-bottom: 2.25rem;
   }
 
-  /* The community member and special guest get the room; co-hosts and date
-     sit on a quieter second line. */
+  /* The community member gets the room; co-hosts and date sit on a quieter
+     second line. */
   .event-meta-primary {
     display: grid;
     grid-template-columns: 1fr;
@@ -774,7 +553,6 @@
   }
 
   @media (min-width: 640px) {
-    .event-meta-primary,
     .event-meta-secondary {
       grid-template-columns: 1fr 1fr;
     }
@@ -890,114 +668,4 @@
     line-height: 1.65;
   }
 
-  /* ─── FOOTER ─── */
-  .es-footer {
-    padding: clamp(3rem, 6vw, 4.5rem) 0 clamp(2.5rem, 5vw, 3.5rem);
-    border-top: 1px solid var(--border);
-    text-align: center;
-    background: var(--bg-warm);
-  }
-
-  .kent-note {
-    display: inline-flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.85rem;
-    max-width: 100%;
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-full);
-    padding: 0.5rem 1.25rem 0.5rem 0.5rem;
-    margin-bottom: 2rem;
-    box-shadow: var(--shadow-sm);
-  }
-
-  .kent-note img {
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-
-  .kent-note span {
-    font-size: 0.9rem;
-    color: var(--fg-soft);
-    font-weight: 500;
-  }
-
-  .kent-note strong {
-    color: var(--fg);
-    font-weight: 700;
-  }
-
-  .kent-note a {
-    color: var(--purple);
-    font-weight: 700;
-    text-decoration: none;
-  }
-
-  .kent-note a:hover {
-    text-decoration: underline;
-  }
-
-  .footer-note {
-    font-size: 0.95rem;
-    color: var(--muted);
-    margin-bottom: 1.25rem;
-    line-height: 1.7;
-  }
-
-  .footer-note a {
-    color: var(--coral);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-thickness: 2px;
-    font-weight: 700;
-  }
-
-  .citation {
-    font-size: 0.8rem;
-    color: #8a8698;
-    margin: 0 auto;
-    line-height: 1.7;
-    max-width: 40rem;
-    font-style: italic;
-  }
-
-  .citation a {
-    color: var(--purple);
-    font-style: normal;
-    font-weight: 700;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-
-  .citation a:hover {
-    text-decoration: underline;
-  }
-
-  .footer-bar {
-    background: var(--navy-1);
-    padding: 1.5rem 0;
-  }
-
-  .footer-bar .es-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.6rem 2rem;
-  }
-
-  .footer-bar a {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    transition: color 0.15s;
-  }
-
-  .footer-bar a:hover {
-    color: #fff;
-  }
 </style>

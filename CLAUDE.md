@@ -11,8 +11,11 @@ only durable, non-obvious facts that save re-discovery.
 - Dev: `npm run dev` (Vite on http://localhost:5173). Build: `npm run build`. Preview: `npm run preview`.
 - Deploy: GitHub Pages via `.github/workflows/deploy.yml` on push to `main` (builds `./dist`).
 - Remotes: `origin` = KentBeck/thinkies.org (production), `staging` = mariomelo/twc_website.
-- Some pages are data-driven — e.g. `/exploring-stuckness` reads from
-  `src/lib/data/exploring-stuckness.js` (single source of truth for the event).
+- Some pages are data-driven — e.g. `/exploring-stuckness` and its archive at
+  `/exploring-stuckness/past/` both read from `src/lib/data/exploring-stuckness.js`
+  (single source of truth for the event). When a workshop passes, move `nextEvent`
+  into the front of `pastEvents` — the two objects share a shape so it's a
+  copy-paste — then fill `nextEvent` with the new one.
 
 ## ⚠️ DaisyUI global class-name collisions (learned the hard way)
 
@@ -52,5 +55,10 @@ property and grep the built global CSS for a bare `.<classname>` DaisyUI rule.
 
 - Scoped Svelte `<style>` lives inside each `.svelte` file; there's no shared component
   CSS file to hunt for. Global styles: `src/app.css`.
+- One exception: the two Exploring Stuckness pages share a shell (design tokens, nav,
+  coral button, footer) in the `.es-page` section at the bottom of `src/app.css`. Its
+  rules are nested under `.es-page` both to keep the generic names (`.brand`, `.dot`,
+  `.hl`) off the daisyUI pages and because the two-class specificity beats daisyUI's
+  unscoped rules. Page-specific styling still lives in each route's scoped `<style>`.
 - Prefer the data files in `src/lib/data/` over editing markup when changing event
   details, people, or card contents.
