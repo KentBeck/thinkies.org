@@ -80,6 +80,16 @@
       <a href="#next-vignette" class="scroll-link">
         Join the conversation on {nextEvent.dateCasual} ↓
       </a>
+
+      <figure class="hero-poster">
+        <img
+          src="{base}/img/exploring-stuckness/{nextEvent.poster}"
+          alt="Poster for Exploring Stuckness on {nextEvent.dateLong} at {nextEvent.timeShort}. This month's stuckness vignette: {nextEvent.vignette}. With {nextEvent.communityMember}, {nextEvent.coHosts}."
+          width="1600"
+          height="878"
+          decoding="async"
+        />
+      </figure>
     </div>
   </header>
 
@@ -199,7 +209,7 @@
     <!-- ─── FINAL CTA ─── -->
     <section class="join-cta">
       <div class="es-container">
-        <p class="join-cta__eyebrow">{nextEvent.dateLong} · {nextEvent.time}</p>
+        <p class="join-cta__eyebrow">{nextEvent.dateLong} · {nextEvent.timeShort}</p>
         <h2 class="join-cta__title">Come explore the stuckness with us</h2>
         <p class="join-cta__text">
           Pull up a chair, bring your curiosity, and let's see if we can break the
@@ -353,6 +363,20 @@
   .hero .scroll-link:hover {
     gap: 0.75rem;
     color: var(--purple-deep);
+  }
+
+  .hero-poster {
+    max-width: 58rem;
+    margin: 3rem auto 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    line-height: 0;
+  }
+
+  .hero-poster img {
+    width: 100%;
+    height: auto;
   }
 
   /* ─── SHARED SECTION HEADINGS ─── */
@@ -509,8 +533,11 @@
     animation: pulse 2s ease-in-out infinite;
   }
 
+  /* Sized so a ~60-character vignette title stays on one line from ~950px up;
+     below that it wraps, balanced. Widen the clamp if titles get shorter. */
   .event-card h2 {
-    font-size: clamp(1.6rem, 3.8vw, 2.25rem);
+    font-size: clamp(1.6rem, 2.7vw, 1.95rem);
+    text-wrap: balance;
     font-weight: 800;
     letter-spacing: -0.025em;
     line-height: 1.2;

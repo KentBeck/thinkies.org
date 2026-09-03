@@ -28,3 +28,7 @@ dist-ssr
 debug_cleaned.json
 data/twc1_data_clean.json
 clean-json.cjs
+
+# Poster source art. Only the optimised .webp derivative is committed and
+# deployed; the full-size PNG stays local (2.6MB vs 204KB).
+static/img/exploring-stuckness/*-vignette.png

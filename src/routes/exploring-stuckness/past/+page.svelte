@@ -134,7 +134,7 @@
     <!-- ─── NEXT ONE ─── -->
     <section class="up-next">
       <div class="es-container">
-        <p class="up-next__eyebrow">Up next · {nextEvent.dateLong} · {nextEvent.time}</p>
+        <p class="up-next__eyebrow">Up next · {nextEvent.dateLong} · {nextEvent.timeShort}</p>
         <h2 class="up-next__title">{nextEvent.vignette}</h2>
         <p class="up-next__text">
           The next vignette is already on the table. Come add your angle to it.

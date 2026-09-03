@@ -27,7 +27,14 @@ export const nextEvent = {
   dateShort: 'Thu, Sep 10',
   /** Just the day, for prose like "Join the conversation on September 10th". */
   dateCasual: 'September 10th',
-  time: '8:30am - 10am PDT / 5:30pm CEST'
+  time: '8:30am - 10am PDT / 5:30pm CEST',
+  /**
+   * Start times only, for the compact eyebrow lines. The compound `time`
+   * above reads as "10am" at a glance when it sits inline with the date.
+   */
+  timeShort: '8:30am PDT / 5:30pm CEST',
+  /** The event poster, in static/img/exploring-stuckness/. */
+  poster: '260910-vignette.webp'
 };
 
 /**
