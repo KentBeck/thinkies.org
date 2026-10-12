@@ -11,22 +11,27 @@
  * same shape so that move is a copy-paste, not a rewrite.
  */
 
-export const eventbriteUrl =
-  'https://www.eventbrite.com/e/exploring-stuckness-community-workshop-ii-tickets-1999424680041';
+/**
+ * Registration link for `nextEvent`. Leave it `null` until the Eventbrite page
+ * exists: the pages then show a "Registration opens soon" placeholder instead
+ * of the sign-up buttons.
+ */
+export const eventbriteUrl = null;
 
 export const nextEvent = {
-  vignette: "Have to Explain When I Don't Have Words",
-  challenge: 'The Challenge: Agents Need Explanation for Tacit Intuitions',
+  vignette: 'Stuckness That Feels Like Motion',
+  challenge:
+    "The Challenge: Moving Fast, But Losing Touch With Whether We're Moving Toward the Right Thing",
   description:
-    "Working with an agent shifts communication toward explicit language, but not every intuitive instinct is that easy to express in words. In talking with another human, you can point to things and have a shared embodied experience that enables rich multichannel non-verbal communication. A felt sense of which way to go often precedes our ability to make words. Having to externalize thoughts that you aren't quite confident in yourself also makes it difficult to put that forward with your team.",
+    "Working with agents, it's easier than ever to get moving. We have a fuzzy idea of what we want to build, the agent proposes a direction, and it looks pretty good. Sure, let's go! Before long, we're producing enormous amounts of code, merging PRs, and building out new functionality. It feels like we're making tremendous progress. But the ease of moving means we may not really be understanding the problem, questioning our assumptions, or discovering whether what we are building is the right thing. The frictions that would ordinarily cause us to pause, talk, reconsider, and learn are replaced by ready-made answers that look plausible enough, and we are moving fast! There's so much activity, so much code, but underneath it all, a growing unease and wondering whether we’re moving in the right direction at all. Are we really making progress toward what matters, or have we just gotten fast at moving?",
   /** Highlighted (marker pen) fragment of the description above. */
-  descriptionHighlight: 'not every intuitive instinct is that easy to express in words',
+  descriptionHighlight: 'we may not really be understanding the problem',
   communityMember: 'Blake Lindsay',
   coHosts: 'Arty Starr, Russ Miles',
-  dateLong: 'Thursday, September 10, 2026',
-  dateShort: 'Thu, Sep 10',
+  dateLong: 'Tuesday, October 20, 2026',
+  dateShort: 'Tue, Oct 20',
   /** Just the day, for prose like "Join the conversation on September 10th". */
-  dateCasual: 'September 10th',
+  dateCasual: 'October 20th',
   time: '8:30am - 10am PDT / 5:30pm CEST',
   /**
    * Start times only, for the compact eyebrow lines. The compound `time`
@@ -34,7 +39,7 @@ export const nextEvent = {
    */
   timeShort: '8:30am PDT / 5:30pm CEST',
   /** The event poster, in static/img/exploring-stuckness/. */
-  poster: '260910-vignette.webp'
+  poster: '261020-vignette.webp'
 };
 
 /**
@@ -47,6 +52,23 @@ export const nextEvent = {
  *              An empty array simply renders no chips.
  */
 export const pastEvents = [
+  {
+    number: 'Workshop II',
+    vignette: "Have to Explain When I Don't Have Words",
+    challenge: 'The Challenge: Agents Need Explanation for Tacit Intuitions',
+    description:
+      "Working with an agent shifts communication toward explicit language, but not every intuitive instinct is that easy to express in words. In talking with another human, you can point to things and have a shared embodied experience that enables rich multichannel non-verbal communication. A felt sense of which way to go often precedes our ability to make words. Having to externalize thoughts that you aren't quite confident in yourself also makes it difficult to put that forward with your team.",
+    descriptionHighlight: 'not every intuitive instinct is that easy to express in words',
+    communityMember: 'Blake Lindsay',
+    coHosts: 'Arty Starr, Russ Miles',
+    dateLong: 'Thursday, September 10, 2026',
+    dateShort: 'Thu, Sep 10',
+    dateCasual: 'September 10th',
+    time: '8:30am - 10am PDT / 5:30pm CEST',
+    timeShort: '8:30am PDT / 5:30pm CEST',
+    poster: '260910-vignette.webp',
+    links: []
+  },
   {
     number: 'Workshop I',
     vignette: 'The Shallow Mental Model',

@@ -39,8 +39,8 @@
           <li><a href="{base}/exploring-stuckness/#next-vignette">Next Vignette</a></li>
         </ul>
         <a
-          href={eventbriteUrl}
-          target="_blank"
+          href={eventbriteUrl ?? `${base}/exploring-stuckness/#next-vignette`}
+          target={eventbriteUrl ? '_blank' : undefined}
           rel="noopener noreferrer"
           class="next-pill"
         >
@@ -140,19 +140,23 @@
           The next vignette is already on the table. Come add your angle to it.
         </p>
         <div class="up-next__actions">
-          <a
-            href={eventbriteUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-es-coral"
-          >
-            Save your spot on Eventbrite
-            <svg viewBox="0 0 20 20" aria-hidden="true">
-              <path
-                d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-              />
-            </svg>
-          </a>
+          {#if eventbriteUrl}
+            <a
+              href={eventbriteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-es-coral"
+            >
+              Save your spot on Eventbrite
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path
+                  d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                />
+              </svg>
+            </a>
+          {:else}
+            <span class="btn-es-coral btn-es-coral--soon">Registration opens soon</span>
+          {/if}
           <a href="{base}/exploring-stuckness/#next-vignette" class="up-next__link">
             Read the vignette →
           </a>
@@ -175,13 +179,15 @@
           >
         </span>
       </div>
-      <p class="footer-note">
-        Want to be part of the next one?
-        <a href={eventbriteUrl} target="_blank" rel="noopener noreferrer">
-          Register on Eventbrite
-        </a>
-        to join us live.
-      </p>
+      {#if eventbriteUrl}
+        <p class="footer-note">
+          Want to be part of the next one?
+          <a href={eventbriteUrl} target="_blank" rel="noopener noreferrer">
+            Register on Eventbrite
+          </a>
+          to join us live.
+        </p>
+      {/if}
       <p class="citation">
         "Stuckness Vignettes" are inspired by an academic paper by
         {paperCitation.authors},

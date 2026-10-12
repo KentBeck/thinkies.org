@@ -44,8 +44,8 @@
           <li><a href="{base}/exploring-stuckness/past/">Past Vignettes</a></li>
         </ul>
         <a
-          href={eventbriteUrl}
-          target="_blank"
+          href={eventbriteUrl ?? '#next-vignette'}
+          target={eventbriteUrl ? '_blank' : undefined}
           rel="noopener noreferrer"
           class="next-pill"
         >
@@ -179,19 +179,23 @@
             </div>
           </div>
 
-          <a
-            href={eventbriteUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-es-coral"
-          >
-            Save your spot on Eventbrite
-            <svg viewBox="0 0 20 20" aria-hidden="true">
-              <path
-                d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-              />
-            </svg>
-          </a>
+          {#if eventbriteUrl}
+            <a
+              href={eventbriteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-es-coral"
+            >
+              Save your spot on Eventbrite
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path
+                  d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                />
+              </svg>
+            </a>
+          {:else}
+            <span class="btn-es-coral btn-es-coral--soon">Registration opens soon</span>
+          {/if}
         </div>
 
         <div class="people-head">
@@ -215,19 +219,23 @@
           Pull up a chair, bring your curiosity, and let's see if we can break the
           stuck together.
         </p>
-        <a
-          href={eventbriteUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-es-coral"
-        >
-          Save your spot on Eventbrite
-          <svg viewBox="0 0 20 20" aria-hidden="true">
-            <path
-              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-            />
-          </svg>
-        </a>
+        {#if eventbriteUrl}
+          <a
+            href={eventbriteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-es-coral"
+          >
+            Save your spot on Eventbrite
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path
+                d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+              />
+            </svg>
+          </a>
+        {:else}
+          <span class="btn-es-coral btn-es-coral--soon">Registration opens soon</span>
+        {/if}
       </div>
     </section>
   </main>
@@ -246,13 +254,15 @@
           >
         </span>
       </div>
-      <p class="footer-note">
-        Can't make the date live?
-        <a href={eventbriteUrl} target="_blank" rel="noopener noreferrer">
-          Register on Eventbrite anyway
-        </a>
-        to get notified of the next community workshop.
-      </p>
+      {#if eventbriteUrl}
+        <p class="footer-note">
+          Can't make the date live?
+          <a href={eventbriteUrl} target="_blank" rel="noopener noreferrer">
+            Register on Eventbrite anyway
+          </a>
+          to get notified of the next community workshop.
+        </p>
+      {/if}
       <p class="citation">
         "Stuckness Vignettes" are inspired by an academic paper by
         {paperCitation.authors},

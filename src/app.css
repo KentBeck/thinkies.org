@@ -357,6 +357,16 @@
     transform: translate(2px, -2px);
   }
 
+  /* Placeholder while the next workshop's registration isn't open yet. */
+  .es-page .btn-es-coral--soon,
+  .es-page .btn-es-coral--soon:hover {
+    background: var(--border);
+    color: var(--muted);
+    cursor: default;
+    transform: none;
+    box-shadow: none;
+  }
+
   /* ─── FOOTER ─── */
   .es-page .es-footer {
     padding: clamp(3rem, 6vw, 4.5rem) 0 clamp(2.5rem, 5vw, 3.5rem);
