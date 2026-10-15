@@ -16,7 +16,8 @@
  * exists: the pages then show a "Registration opens soon" placeholder instead
  * of the sign-up buttons.
  */
-export const eventbriteUrl = null;
+export const eventbriteUrl =
+  'https://www.eventbrite.com/e/exploring-stuckness-community-workshop-iii-tickets-2003362133069';
 
 export const nextEvent = {
   vignette: 'Stuckness That Feels Like Motion',
